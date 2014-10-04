@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7BC2D19DFEA3F002CEF35 /* Explore.m */; };
 		6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388B19DF9EDA00BD1CF6 /* main.m */; };
 		6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388E19DF9EDA00BD1CF6 /* AppDelegate.m */; };
 		6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44389119DF9EDA00BD1CF6 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DF7BC2C19DFEA3F002CEF35 /* Explore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explore.h; sourceTree = "<group>"; };
+		3DF7BC2D19DFEA3F002CEF35 /* Explore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explore.m; sourceTree = "<group>"; };
 		6C44388619DF9EDA00BD1CF6 /* Picky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C44388A19DF9EDA00BD1CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C44388B19DF9EDA00BD1CF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 			children = (
 				6C44389019DF9EDA00BD1CF6 /* ViewController.h */,
 				6C44389119DF9EDA00BD1CF6 /* ViewController.m */,
+				3DF7BC2C19DFEA3F002CEF35 /* Explore.h */,
+				3DF7BC2D19DFEA3F002CEF35 /* Explore.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */,
 				6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */,
 				6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */,
+				3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
