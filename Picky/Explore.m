@@ -9,6 +9,7 @@
 #import "Explore.h"
 
 @interface Explore ()
+@property (weak, nonatomic) IBOutlet UIImageView *currentImage;
 
 @end
 
