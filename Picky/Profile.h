@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Profile : UIViewController
+@interface Profile : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
