@@ -17,7 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"HI WILLIAM");
+    NSLog(@"blahblah");
+    NSLog(@"what");
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void) randomMethod
+{
+    return;
 }
 
 - (void)didReceiveMemoryWarning {
