@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *yourPicks;
 
 @property NSArray *recentMealsArray;
+@property NSArray *yourPicksArray;
 
 @end
 
@@ -23,7 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.recentMealsArray = [[NSArray alloc] init];
+    self.recentMeals.delegate = self;
+    self.recentMeals.dataSource = self;
+    self.yourPicks.delegate = self;
+    self.yourPicks.dataSource = self;
+    if (!self.recentMealsArray) {
+        self.recentMealsArray = [[NSArray alloc] init];
+    }
     
 }
 
@@ -32,14 +39,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(int)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if ([collectionView isEqual:self.recentMeals]) {
+        return self.recentMealsArray.count;
+    }
+    else if ([collectionView isEqual:self.yourPicks]) {
+        return self.yourPicksArray.count;
+    }
+    return 0;
 }
-*/
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([collectionView isEqual:self.recentMeals]) {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
+        return cell;
+    }
+    else if ([collectionView isEqual:self.yourPicks]) {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
+        return cell;
+    }
+    else {
+        return nil;
+    }
+}
 
 @end
