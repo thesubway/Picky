@@ -170,7 +170,7 @@
     {
         [_currentImage setImage: [self getNewPicture: -1]];
     }
-    [self updateRestaurant: @"RESTAURANT: THAI BASIL"];
+    [self updateRestaurant: @"Location: Thai Basil"];
 }
 
 
