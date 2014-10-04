@@ -20,6 +20,9 @@
     NSLog(@"some string");
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (void)RandomFunction {
+    NSLog(@"HI THIS IS MY CHANGE")
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
