@@ -16,17 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"some string 2");
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)RandomFunction {
     NSLog(@"HI THIS IS MY CHANGE")
-}
-
-- (void) uselessMethod
-{
-    NSLog(@"go bears");
-    return;
 }
 
 - (void)didReceiveMemoryWarning {
