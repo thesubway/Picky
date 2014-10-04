@@ -83,8 +83,7 @@
 			children = (
 				6C44388D19DF9EDA00BD1CF6 /* AppDelegate.h */,
 				6C44388E19DF9EDA00BD1CF6 /* AppDelegate.m */,
-				6C44389019DF9EDA00BD1CF6 /* ViewController.h */,
-				6C44389119DF9EDA00BD1CF6 /* ViewController.m */,
+				6D2CE1E519DFE52E00FFB0C6 /* ViewControllers */,
 				6C44389319DF9EDA00BD1CF6 /* Main.storyboard */,
 				6C44389619DF9EDA00BD1CF6 /* Images.xcassets */,
 				6C44389819DF9EDA00BD1CF6 /* LaunchScreen.xib */,
@@ -117,6 +116,15 @@
 				6C4438A419DF9EDA00BD1CF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D2CE1E519DFE52E00FFB0C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C44389019DF9EDA00BD1CF6 /* ViewController.h */,
+				6C44389119DF9EDA00BD1CF6 /* ViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +420,7 @@
 				6C4438AB19DF9EDB00BD1CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C4438AC19DF9EDB00BD1CF6 /* Build configuration list for PBXNativeTarget "PickyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +429,7 @@
 				6C4438AE19DF9EDB00BD1CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

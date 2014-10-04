@@ -24,7 +24,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+//    var imag = [[UIImagePickerController alloc] init];
 }
 
 - (void) randomMethod
