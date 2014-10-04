@@ -13,7 +13,7 @@
 @end
 @implementation ViewController
 
-bool *cameraShown = NO;
+static bool cameraShown = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"HI WILLIAM");
@@ -27,22 +27,23 @@ bool *cameraShown = NO;
 
     [super viewDidAppear:animated];
 //    if UIImagePickerController
-//    if (self.cameraShown == NO) {
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-        UIImagePickerController *imag = [[UIImagePickerController alloc] init];
-        imag.delegate = self;
-        imag.sourceType = UIImagePickerControllerSourceTypeCamera;
-        imag.allowsEditing = false;
-        [self presentViewController:imag animated:true completion:nil];
+    if (cameraShown == NO) {
+        if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+            cameraShown = YES;
+            UIImagePickerController *imag = [[UIImagePickerController alloc] init];
+            imag.delegate = self;
+            imag.sourceType = UIImagePickerControllerSourceTypeCamera;
+            imag.allowsEditing = false;
+            [self presentViewController:imag animated:true completion:nil];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] init];
+            alert.title = @"No camera detected";
+            alert.message = @"This device does not have a camera available";
+            [alert addButtonWithTitle:@"OK"];
+            [alert show];
+        }
     }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] init];
-        alert.title = @"No camera detected";
-        alert.message = @"This device does not have a camera available";
-        [alert addButtonWithTitle:@"OK"];
-        [alert show];
-    }
-//    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
