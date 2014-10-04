@@ -47,7 +47,8 @@
         return 5;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
-        return self.yourPicksArray.count;
+//        return self.yourPicksArray.count;
+        return 5;
     }
     return 0;
 }
@@ -56,7 +57,7 @@
     if ([collectionView isEqual:self.recentMeals]) {
         RecentMealsCell *cell
         = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
-        int *randNum = arc4random() % 5;
+        int randNum = arc4random() % 5;
         if (randNum == 0) {
             cell.imageView.image = [UIImage imageNamed:@"anderstruong.jpg"];
         }
@@ -76,6 +77,9 @@
     }
     else if ([collectionView isEqual:self.yourPicks]) {
         YourPicksCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
+        cell.imageView.image = [UIImage imageNamed:@"tomoueda.jpg"];
+        cell.imageView.layer.borderWidth = 2;
+        [cell.imageView.layer setBorderColor:[[UIColor blueColor] CGColor]];
         return cell;
     }
     else {
