@@ -11,21 +11,23 @@
 @interface ViewController ()
 
 @end
-
 @implementation ViewController
 
+bool *cameraShown = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"HI WILLIAM");
     NSLog(@"blahblah");
     NSLog(@"what");
     NSLog(@"Dan says hi");
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 
     [super viewDidAppear:animated];
 //    if UIImagePickerController
+//    if (self.cameraShown == NO) {
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
         UIImagePickerController *imag = [[UIImagePickerController alloc] init];
         imag.delegate = self;
@@ -40,6 +42,18 @@
         [alert addButtonWithTitle:@"OK"];
         [alert show];
     }
+//    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:^{
+        //save image data.
+    }];
+    UIAlertView *alert = [[UIAlertView alloc] init];
+    alert.title = @"";
+    alert.message = @"Enjoy your food!";
+    [alert addButtonWithTitle:@"OK!"];
+    [alert show];
 }
 
 - (void) randomMethod
