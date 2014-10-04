@@ -52,6 +52,10 @@
     // Adding the swipe gesture on image view
     [_currentImage addGestureRecognizer: swipeLeft];
     [_currentImage addGestureRecognizer: swipeRight];
+    
+    UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(onDoubleTap:)];
+    [doubleTap setNumberOfTapsRequired: 2];
+    [_currentImage addGestureRecognizer: doubleTap];
 }
 
 /*
@@ -65,10 +69,31 @@
 /*
 * increases the upvote counter of an image
 */
-- (void) upvote
+- (void) updateVote
 {
     /* YOUR CODE HERE */
 }
+
+- (void) onDoubleTap: (id) sender
+{
+    [self updateVote];
+}
+
+
+
+
+
+
+
+- (void) updateRestaurant: (NSString *) name
+{
+    [_restaurantName setText: name];
+}
+
+
+
+
+
 
 /*
 * gets a random picture of a random food
@@ -79,6 +104,9 @@
     if (direction == 1)
     {
         NSLog(@"swipe left");
+        
+        
+        // TEST CODE //
         int random = arc4random_uniform(5);
         UIImage * newImage;
         if (random == 0)
@@ -101,6 +129,7 @@
         {
             newImage = [UIImage imageNamed: @"anderstruong.jpg"];
         }
+        // END TEST CODE //
         
         /* YOUR CODE HERE */
         
@@ -111,6 +140,7 @@
         }
         else
         {
+            _imageIndex++;
             [_imageCache addObject: newImage];
             return newImage;
         }
@@ -136,10 +166,11 @@
     {
         [_currentImage setImage: [self getNewPicture: 1]];
     }
-    if ([sender direction] == UISwipeGestureRecognizerDirectionRight)
+    else if ([sender direction] == UISwipeGestureRecognizerDirectionRight)
     {
         [_currentImage setImage: [self getNewPicture: -1]];
     }
+    [self updateRestaurant: @"RESTAURANT: THAI BASIL"];
 }
 
 
