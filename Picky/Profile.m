@@ -15,13 +15,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UICollectionView *yourPicks;
 
+@property NSArray *recentMealsArray;
+
 @end
 
 @implementation Profile
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.recentMealsArray = [[NSArray alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -27,7 +27,7 @@ static bool cameraShown = NO;
 
     [super viewDidAppear:animated];
 //    if UIImagePickerController
-//    if (cameraShown == NO) {
+    if (cameraShown == NO) {
         if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
             cameraShown = YES;
             UIImagePickerController *imag = [self imagePicker];
@@ -45,7 +45,7 @@ static bool cameraShown = NO;
             [alert addButtonWithTitle:@"OK"];
             [alert show];
         }
-//    }
+    }
 }
 
 -(UIImagePickerController *)imagePicker{
