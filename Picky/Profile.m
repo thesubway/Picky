@@ -33,7 +33,7 @@
     if (!self.recentMealsArray) {
         self.recentMealsArray = [[NSArray alloc] init];
     }
-    
+//    [self.recentMeals reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +43,8 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if ([collectionView isEqual:self.recentMeals]) {
-        return self.recentMealsArray.count;
+//        return self.recentMealsArray.count;
+        return 5;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
         return self.yourPicksArray.count;
@@ -55,6 +56,22 @@
     if ([collectionView isEqual:self.recentMeals]) {
         RecentMealsCell *cell
         = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
+        int *randNum = arc4random() % 5;
+        if (randNum == 0) {
+            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"anderstruong.jpg"];
+        }
+        else if (randNum == 1) {
+            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"logancarter.jpg"];
+        }
+        else if (randNum == 2) {
+            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"luisvasquez.jpg"];
+        }
+        else if (randNum == 3) {
+            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"williamwu.jpg"];
+        }
+        else if (randNum == 4) {
+            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"tomoueda.jpg"];
+        }
         return cell;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
