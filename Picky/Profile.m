@@ -41,7 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(int)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if ([collectionView isEqual:self.recentMeals]) {
         return self.recentMealsArray.count;
     }
