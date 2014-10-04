@@ -22,6 +22,11 @@
     NSLog(@"Dan says hi");
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
+
 - (void) randomMethod
 {
     return;
