@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"facebook");
-    NSLOG(@"Quora");
+    NSLog(@"Quora");
     // Do any additional setup after loading the view, typically from a nib.
 }
 
