@@ -58,19 +58,19 @@
         = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
         int *randNum = arc4random() % 5;
         if (randNum == 0) {
-            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"anderstruong.jpg"];
+            cell.imageView.image = [UIImage imageNamed:@"anderstruong.jpg"];
         }
         else if (randNum == 1) {
-            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"logancarter.jpg"];
+            cell.imageView.image = [UIImage imageNamed:@"logancarter.jpg"];
         }
         else if (randNum == 2) {
-            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"luisvasquez.jpg"];
+            cell.imageView.image = [UIImage imageNamed:@"luisvasquez.jpg"];
         }
         else if (randNum == 3) {
-            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"williamwu.jpg"];
+            cell.imageView.image = [UIImage imageNamed:@"williamwu.jpg"];
         }
         else if (randNum == 4) {
-            cell.imageView.image = [[UIImage alloc] initWithContentsOfFile:@"tomoueda.jpg"];
+            cell.imageView.image = [UIImage imageNamed:@"tomoueda.jpg"];
         }
         return cell;
     }
