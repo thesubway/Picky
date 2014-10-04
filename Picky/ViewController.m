@@ -24,7 +24,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-//    var imag = [[UIImagePickerController alloc] init];
+    UIImagePickerController *imag = [[UIImagePickerController alloc] init];
+    imag.delegate = self;
+    imag.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imag.allowsEditing = false;
+    
+//    self presentViewController(imag, animated: true, completion: nil);
+    [self presentViewController:imag animated:true completion:nil];
+
 }
 
 - (void) randomMethod
