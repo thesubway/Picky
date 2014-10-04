@@ -53,7 +53,8 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([collectionView isEqual:self.recentMeals]) {
-        RecentMealsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
+        RecentMealsCell *cell
+        = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
         return cell;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
