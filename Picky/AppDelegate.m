@@ -20,8 +20,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"JkLfAEVG2reT1EFZdmRc7q7Yl1gmQQTVBbGbxDxb"
                   clientKey:@"3tFH13Bj312ajFFsv9FijpP1BQY5tsinQ3v6cWlp"];
-    User* user = [[User alloc] initWithId:1];
-    User* user2 = [[User alloc] initWithId:1];
     return YES;
 }
 
