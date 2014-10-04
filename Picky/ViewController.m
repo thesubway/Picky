@@ -19,7 +19,7 @@
     NSLog(@"HI WILLIAM");
     NSLog(@"blahblah");
     NSLog(@"what");
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"Dan says hi");
 }
 
 - (void) randomMethod
