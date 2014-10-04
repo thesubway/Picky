@@ -10,6 +10,8 @@
 
 @interface Explore ()
 
+@property NSMutableArray * recentlyViewed;
+
 @end
 
 @implementation Explore
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _recentlyViewed = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,8 +27,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)printRandom:(id)sender {
-    NSLog(@"sdpafsdpfiauspfod");
+- (void) upvote
+{
+    
+}
+
+- (UIImage *) getNewPicture
+{
+    UIImage * image;
+    /* YOUR CODE HERE */
+    return image;
+}
+
+- (void) nextPicture
+{
+    UIImage * newImage = [self getNewPicture];
+    [_currentImage setImage: newImage];
+}
+
+- (void) prevPicture
+{
+    
 }
 
 
