@@ -7,6 +7,8 @@
 //
 
 #import "Profile.h"
+#import "RecentMealsCell.h"
+#import "YourPicksCell.h"
 
 @interface Profile ()
 @property (weak, nonatomic) IBOutlet UILabel *profileTitle;
@@ -51,11 +53,11 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([collectionView isEqual:self.recentMeals]) {
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
+        RecentMealsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
         return cell;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
+        YourPicksCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
         return cell;
     }
     else {
