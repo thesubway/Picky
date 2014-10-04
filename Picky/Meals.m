@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [_mealsTable setRowHeight: 100];
+    [_mealsTable setDelegate: self];
+    [_mealsTable setDataSource: self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,15 +29,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath
+{
+    UITableViewCell * cell = [[UITableViewCell alloc] init];
+    UIImageView * preview = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"williamwu.jpg"]];
+    [preview setFrame: cell.frame];
+    [[cell contentView] addSubview: preview];
+    return cell;
+}
+
 - (NSInteger) numberOfSectionsInTableView: (UITableView *) tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section
 {
-    return 2;
+    return 3;
 }
+
+
 
 /*
 #pragma mark - Navigation
