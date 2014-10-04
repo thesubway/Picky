@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7BC2D19DFEA3F002CEF35 /* Explore.m */; };
 		3DF7BC5719DFFDBE002CEF35 /* tomoueda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7BC5619DFFDBE002CEF35 /* tomoueda.jpg */; };
+		3DF7BC5A19E0042E002CEF35 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7BC5919E0042E002CEF35 /* Profile.m */; };
+		3DF7BC5D19E004B9002CEF35 /* Meals.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7BC5C19E004B9002CEF35 /* Meals.m */; };
+		3DF7BC6019E007F8002CEF35 /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7BC5F19E007F8002CEF35 /* Rating.m */; };
 		6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388B19DF9EDA00BD1CF6 /* main.m */; };
 		6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388E19DF9EDA00BD1CF6 /* AppDelegate.m */; };
 		6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44389119DF9EDA00BD1CF6 /* ViewController.m */; };
@@ -32,6 +35,12 @@
 		3DF7BC2C19DFEA3F002CEF35 /* Explore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explore.h; sourceTree = "<group>"; };
 		3DF7BC2D19DFEA3F002CEF35 /* Explore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explore.m; sourceTree = "<group>"; };
 		3DF7BC5619DFFDBE002CEF35 /* tomoueda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomoueda.jpg; sourceTree = "<group>"; };
+		3DF7BC5819E0042E002CEF35 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		3DF7BC5919E0042E002CEF35 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		3DF7BC5B19E004B9002CEF35 /* Meals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meals.h; sourceTree = "<group>"; };
+		3DF7BC5C19E004B9002CEF35 /* Meals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meals.m; sourceTree = "<group>"; };
+		3DF7BC5E19E007F8002CEF35 /* Rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rating.h; sourceTree = "<group>"; };
+		3DF7BC5F19E007F8002CEF35 /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rating.m; sourceTree = "<group>"; };
 		6C44388619DF9EDA00BD1CF6 /* Picky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C44388A19DF9EDA00BD1CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C44388B19DF9EDA00BD1CF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -147,6 +156,12 @@
 				6C44389119DF9EDA00BD1CF6 /* ViewController.m */,
 				3DF7BC2C19DFEA3F002CEF35 /* Explore.h */,
 				3DF7BC2D19DFEA3F002CEF35 /* Explore.m */,
+				3DF7BC5819E0042E002CEF35 /* Profile.h */,
+				3DF7BC5919E0042E002CEF35 /* Profile.m */,
+				3DF7BC5B19E004B9002CEF35 /* Meals.h */,
+				3DF7BC5C19E004B9002CEF35 /* Meals.m */,
+				3DF7BC5E19E007F8002CEF35 /* Rating.h */,
+				3DF7BC5F19E007F8002CEF35 /* Rating.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -252,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF7BC5D19E004B9002CEF35 /* Meals.m in Sources */,
 				6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */,
+				3DF7BC5A19E0042E002CEF35 /* Profile.m in Sources */,
 				6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */,
 				6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */,
+				3DF7BC6019E007F8002CEF35 /* Rating.m in Sources */,
 				3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,11 @@
 #import "Explore.h"
 
 @interface Explore ()
-@property (weak, nonatomic) IBOutlet UIImageView *currentImage;
 
-@property NSMutableArray * recentlyViewed;
+@property (weak, nonatomic) IBOutlet UIImageView *currentImage;
+@property (weak, nonatomic) IBOutlet UILabel *exploreTitle;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantName;
+@property NSMutableArray * imageCache;
 
 @end
 
@@ -20,9 +22,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _recentlyViewed = [[NSMutableArray alloc] init];
     
+    [self initImage];
     
+    UIImage * image = [UIImage imageNamed: @"tomoueda.jpg"];
+    [_currentImage setImage: image];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) initImage
+{
     [_currentImage setUserInteractionEnabled: YES];
     UISwipeGestureRecognizer * swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget: self action:@selector(onSwipe:)];
     UISwipeGestureRecognizer * swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget: self action:@selector(onSwipe:)];
@@ -34,16 +47,6 @@
     // Adding the swipe gesture on image view
     [_currentImage addGestureRecognizer: swipeLeft];
     [_currentImage addGestureRecognizer: swipeRight];
-    
-    
-    
-    UIImage * image = [UIImage imageNamed: @"tomoueda.jpg"];
-    [_currentImage setImage: image];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) upvote

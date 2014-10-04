@@ -86,16 +86,18 @@
                     </view>
                     <connections>
                         <outlet property="currentImage" destination="Oap-Jg-opT" id="oSd-hK-RMr"/>
+                        <outlet property="exploreTitle" destination="1R2-W9-k7o" id="g7h-qb-IhS"/>
+                        <outlet property="restaurantName" destination="Aq1-05-ATA" id="o4n-Y6-fhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRi-zc-Zn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="528" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="E09-Go-sZm">
             <objects>
-                <viewController id="LEV-FX-bHu" sceneMemberID="viewController">
+                <viewController id="LEV-FX-bHu" customClass="Profile" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BPZ-IZ-kDo"/>
                         <viewControllerLayoutGuide type="bottom" id="jhB-bi-PzP"/>
@@ -351,15 +353,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="label2" destination="aQ3-rE-Qyi" id="6vy-5r-UWt"/>
+                        <outlet property="profileTitle" destination="m57-26-ZoH" id="jAR-Hs-GZf"/>
+                        <outlet property="recentMeals" destination="wKz-eC-3Gr" id="x12-no-hwv"/>
+                        <outlet property="yourPicks" destination="ZB3-fX-m78" id="uZE-xL-rmE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaS-sr-azd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Meals-->
         <scene sceneID="J8x-XU-ePg">
             <objects>
-                <viewController id="dp3-99-wQX" sceneMemberID="viewController">
+                <viewController id="dp3-99-wQX" customClass="Meals" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RpZ-86-TQb"/>
                         <viewControllerLayoutGuide type="bottom" id="d2a-rP-6nc"/>
@@ -390,15 +398,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mealsTable" destination="fit-Fe-jmq" id="kTJ-Vl-d7r"/>
+                        <outlet property="mealsTitle" destination="sdJ-Vn-XnG" id="tme-MR-ZME"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wt-KX-6qU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1358" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Rating-->
         <scene sceneID="hrg-Ol-Caw">
             <objects>
-                <viewController id="kTp-IB-yqk" sceneMemberID="viewController">
+                <viewController id="kTp-IB-yqk" customClass="Rating" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bqf-OY-pgg"/>
                         <viewControllerLayoutGuide type="bottom" id="icy-Ys-x3F"/>
@@ -475,6 +487,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="foodName" destination="o6a-9A-gHZ" id="wuf-qB-3Y7"/>
+                        <outlet property="image" destination="X5g-c3-s9W" id="SAt-0f-bNv"/>
+                        <outlet property="rating" destination="Jzs-AC-RXs" id="Oep-uL-xq4"/>
+                        <outlet property="ratingTitle" destination="Gp6-wd-pPo" id="HFm-ox-Qms"/>
+                        <outlet property="submit" destination="tTk-OU-OeZ" id="Hu8-2k-5TW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jC-TS-r2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,6 +507,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="DLc-7j-yie"/>
-        <segue reference="dIs-yJ-2Gr"/>
+        <segue reference="n1a-Yl-gQh"/>
     </inferredMetricsTieBreakers>
 </document>
