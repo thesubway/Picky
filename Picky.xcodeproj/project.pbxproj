@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7BC2D19DFEA3F002CEF35 /* Explore.m */; };
+		3DF7BC5719DFFDBE002CEF35 /* tomoueda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7BC5619DFFDBE002CEF35 /* tomoueda.jpg */; };
 		6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388B19DF9EDA00BD1CF6 /* main.m */; };
 		6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388E19DF9EDA00BD1CF6 /* AppDelegate.m */; };
 		6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44389119DF9EDA00BD1CF6 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		3DF7BC2C19DFEA3F002CEF35 /* Explore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explore.h; sourceTree = "<group>"; };
 		3DF7BC2D19DFEA3F002CEF35 /* Explore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explore.m; sourceTree = "<group>"; };
+		3DF7BC5619DFFDBE002CEF35 /* tomoueda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomoueda.jpg; sourceTree = "<group>"; };
 		6C44388619DF9EDA00BD1CF6 /* Picky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C44388A19DF9EDA00BD1CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C44388B19DF9EDA00BD1CF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DF7BC5419DFFDBE002CEF35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7BC5519DFFDBE002CEF35 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3DF7BC5519DFFDBE002CEF35 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7BC5619DFFDBE002CEF35 /* tomoueda.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		6C44387D19DF9EDA00BD1CF6 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +104,7 @@
 			children = (
 				6C44388D19DF9EDA00BD1CF6 /* AppDelegate.h */,
 				6C44388E19DF9EDA00BD1CF6 /* AppDelegate.m */,
+				3DF7BC5419DFFDBE002CEF35 /* Resources */,
 				6D2CE1E519DFE52E00FFB0C6 /* ViewControllers */,
 				6C44389319DF9EDA00BD1CF6 /* Main.storyboard */,
 				6C44389619DF9EDA00BD1CF6 /* Images.xcassets */,
@@ -213,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C44389519DF9EDA00BD1CF6 /* Main.storyboard in Resources */,
+				3DF7BC5719DFFDBE002CEF35 /* tomoueda.jpg in Resources */,
 				6C44389A19DF9EDA00BD1CF6 /* LaunchScreen.xib in Resources */,
 				6C44389719DF9EDA00BD1CF6 /* Images.xcassets in Resources */,
 			);

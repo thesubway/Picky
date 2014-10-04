@@ -21,6 +21,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _recentlyViewed = [[NSMutableArray alloc] init];
+    
+    
+    [_currentImage setUserInteractionEnabled: YES];
+    UISwipeGestureRecognizer * swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget: self action:@selector(onSwipe:)];
+    UISwipeGestureRecognizer * swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget: self action:@selector(onSwipe:)];
+    
+    // Setting the swipe direction.
+    [swipeLeft setDirection: UISwipeGestureRecognizerDirectionLeft];
+    [swipeRight setDirection: UISwipeGestureRecognizerDirectionRight];
+    
+    // Adding the swipe gesture on image view
+    [_currentImage addGestureRecognizer: swipeLeft];
+    [_currentImage addGestureRecognizer: swipeRight];
+    
+    
+    
+    UIImage * image = [UIImage imageNamed: @"tomoueda.jpg"];
+    [_currentImage setImage: image];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,15 +58,10 @@
     return image;
 }
 
-- (void) nextPicture
+- (void) onSwipe: (id) sender
 {
     UIImage * newImage = [self getNewPicture];
     [_currentImage setImage: newImage];
-}
-
-- (void) prevPicture
-{
-    
 }
 
 
