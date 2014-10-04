@@ -79,18 +79,38 @@
     if (direction == 1)
     {
         NSLog(@"swipe left");
-        UIImage * newImage = [[UIImage alloc] init];
+        int random = arc4random_uniform(5);
+        UIImage * newImage;
+        if (random == 0)
+        {
+            newImage = [UIImage imageNamed: @"tomoueda.jpg"];
+        }
+        else if (random == 1)
+        {
+            newImage = [UIImage imageNamed: @"luisvasquez.jpg"];
+        }
+        else if (random == 2)
+        {
+            newImage = [UIImage imageNamed: @"logancarter.jpg"];
+        }
+        else if (random == 3)
+        {
+            newImage = [UIImage imageNamed: @"williamwu.jpg"];
+        }
+        else if (random == 4)
+        {
+            newImage = [UIImage imageNamed: @"anderstruong.jpg"];
+        }
         
         /* YOUR CODE HERE */
         
         if (_imageIndex < [_imageCache count])
         {
             _imageIndex++;
-            return [_imageCache objectAtIndex: _imageIndex];
+            return [_imageCache objectAtIndex: _imageIndex - 1];
         }
         else
         {
-            _imageIndex++;
             [_imageCache addObject: newImage];
             return newImage;
         }
