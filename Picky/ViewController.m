@@ -30,11 +30,13 @@ static bool cameraShown = NO;
     if (cameraShown == NO) {
         if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
             cameraShown = YES;
-            UIImagePickerController *imag = [[UIImagePickerController alloc] init];
+            UIImagePickerController *imag = [self imagePicker];
             imag.delegate = self;
             imag.sourceType = UIImagePickerControllerSourceTypeCamera;
             imag.allowsEditing = false;
-            [self presentViewController:imag animated:true completion:nil];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                [self presentViewController:imag animated:true completion:nil];
+            });
         }
         else {
             UIAlertView *alert = [[UIAlertView alloc] init];
@@ -44,6 +46,14 @@ static bool cameraShown = NO;
             [alert show];
         }
     }
+}
+
+-(UIImagePickerController *)imagePicker{
+    if(!_imgPicker){
+        _imgPicker = [[UIImagePickerController alloc]init];
+        _imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    return _imgPicker;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {

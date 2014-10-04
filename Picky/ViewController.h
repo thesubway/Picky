@@ -10,5 +10,8 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate>
 
+@property UIImagePickerController *imgPicker;
+@property UIImage *currentImage;
+
 @end
 
