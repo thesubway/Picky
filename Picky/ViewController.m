@@ -18,7 +18,14 @@
     [super viewDidLoad];
     NSLog(@"facebook");
     NSLog(@"Quora");
+    NSLog(@"hello");
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)uselessMethod
+{
+    NSLog(@"asdf");
+    return;
 }
 
 - (void)didReceiveMemoryWarning {
