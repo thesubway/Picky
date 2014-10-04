@@ -16,11 +16,6 @@
 static bool cameraShown = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"HI WILLIAM");
-    NSLog(@"blahblah");
-    NSLog(@"what");
-    NSLog(@"Dan says hi");
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
