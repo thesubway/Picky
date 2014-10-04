@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RecentMealsCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

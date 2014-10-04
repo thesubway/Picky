@@ -7,6 +7,8 @@
 //
 
 #import "Profile.h"
+#import "RecentMealsCell.h"
+#import "YourPicksCell.h"
 
 @interface Profile ()
 @property (weak, nonatomic) IBOutlet UILabel *profileTitle;
@@ -39,7 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(int)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if ([collectionView isEqual:self.recentMeals]) {
         return self.recentMealsArray.count;
     }
@@ -51,11 +53,12 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([collectionView isEqual:self.recentMeals]) {
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
+        RecentMealsCell *cell
+        = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
         return cell;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
+        YourPicksCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
         return cell;
     }
     else {
