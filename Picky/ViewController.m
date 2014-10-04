@@ -23,17 +23,22 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if (NO)
-    {
+
     [super viewDidAppear:animated];
 //    if UIImagePickerController
-    UIImagePickerController *imag = [[UIImagePickerController alloc] init];
-    imag.delegate = self;
-    imag.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imag.allowsEditing = false;
-    
-//    self presentViewController(imag, animated: true, completion: nil);
-    [self presentViewController:imag animated:true completion:nil];
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerController *imag = [[UIImagePickerController alloc] init];
+        imag.delegate = self;
+        imag.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imag.allowsEditing = false;
+        [self presentViewController:imag animated:true completion:nil];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        alert.title = @"No camera detected";
+        alert.message = @"This device does not have a camera available";
+        [alert addButtonWithTitle:@"OK"];
+        [alert show];
     }
 }
 
