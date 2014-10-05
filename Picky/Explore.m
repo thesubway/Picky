@@ -108,33 +108,13 @@
     {
         NSLog(@"swipe left");
         
-        
+        UIImage * newImage;
         // TEST CODE //
         int random = arc4random_uniform(5);
-        UIImage * newImage;
         if (random == 0)
-        {
-            newImage = [UIImage imageNamed: @"tomoueda.jpg"];
-        }
-        else if (random == 1)
-        {
-            newImage = [UIImage imageNamed: @"luisvasquez.jpg"];
-        }
-        else if (random == 2)
-        {
-            newImage = [UIImage imageNamed: @"logancarter.jpg"];
-        }
-        else if (random == 3)
         {
             newImage = [UIImage imageNamed: @"williamwu.jpg"];
         }
-        else if (random == 4)
-        {
-            newImage = [UIImage imageNamed: @"anderstruong.jpg"];
-        }
-        // END TEST CODE //
-        
-        /* YOUR CODE HERE */
         
         if (_imageIndex < [_imageCache count])
         {
