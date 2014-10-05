@@ -1,20 +1,18 @@
 //
-//  User.h
+//  Meal.h
 //  Picky
 //
-//  Created by Tomo Ueda on 10/4/14.
+//  Created by Logan Carter on 10/4/14.
 //  Copyright (c) 2014 Tomo Ueda. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
 
-@interface User : NSObject
-
+@interface Meal : NSObject
 {
-@private
+    @private
     PFQuery* query;
-    PFObject* user;
+    PFObject* meal;
 }
-
+    
 @end

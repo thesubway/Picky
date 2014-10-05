@@ -3,7 +3,7 @@
 //  Picky
 //
 //  Created by Tomo Ueda on 10/3/14.
-//  Copyright (c) 2014 Tomo Ueda. All rights reserved.
+//  Copyright (c) 2014 Luis Vasquez and friends. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
