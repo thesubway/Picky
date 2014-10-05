@@ -12,6 +12,6 @@
 
 @property UIImagePickerController *imgPicker;
 @property UIImage *currentImage;
-
+-(void) setCameraShown;
 @end
 

@@ -48,6 +48,10 @@ static bool cameraShown = NO;
     }
 }
 
+-(void) setCameraShown{
+    cameraShown = NO;
+}
+
 -(UIImagePickerController *)imagePicker{
     if(!_imgPicker){
         _imgPicker = [[UIImagePickerController alloc]init];

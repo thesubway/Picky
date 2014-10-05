@@ -8,6 +8,7 @@
 
 #import "Rating.h"
 #import "PhotoDatabase.h"
+#import "ViewController.h"
 
 @interface Rating ()
 {
@@ -96,6 +97,11 @@
     _rating = 5.0;
 }
 
+- (IBAction)submitPressed:(UIButton *)sender {
+    ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+    [viewController setCameraShown]; //this sets cameraShown to NO.
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -322,7 +322,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSubmit:" destination="zjn-rN-a1f" eventType="touchUpInside" id="JAW-nJ-aUY"/>
-                                    <segue destination="RCP-Ra-OBB" kind="modal" id="n1a-Yl-gQh"/>
+                                    <action selector="submitPressed:" destination="zjn-rN-a1f" eventType="touchUpInside" id="kn8-W4-Csy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzs-AC-RXs">

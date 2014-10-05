@@ -40,7 +40,7 @@
     PFFile* imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
     PFObject* photo = [PFObject objectWithClassName:@"photo"];
     [photo setObject:imageFile forKey:@"imageFile"];
-    photo.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+//    photo.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     [photo setObject:[NSNumber numberWithInt:photoid] forKey:@"id"];
     [photo setObject:[NSNumber numberWithInteger:userid] forKey:@"user"];
     [photo setObject:[NSNumber numberWithDouble:x] forKey:@"locx"];
