@@ -32,10 +32,26 @@
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath
 {
     UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"cell"];
-    UIImageView * preview = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"williamwu.jpg"]];
-    [preview setFrame: cell.frame];
-    [[cell contentView] addSubview: preview];
+    UILabel * foodName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, tableView.bounds.size.width / 2, [tableView rowHeight] / 2)];
+    [foodName setText: @"My Anaconda"];
+    [foodName setFont: [UIFont fontWithName: @"Verdana" size: 10]];
+    [[cell contentView] addSubview: foodName];
+    UILabel * subtitle = [[UILabel alloc] initWithFrame: CGRectMake(0, [tableView rowHeight] / 2, tableView.bounds.size.width / 2, [tableView rowHeight] / 2)];
+    [subtitle setText: @"Nicki Minaj feat. Tomo"];
+    [subtitle setFont: [UIFont fontWithName: @"Verdana" size: 10]];
+    [[cell contentView] addSubview: subtitle];
+    UIImageView * image = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"luisvasquez.jpg"]];
+    [image setFrame: CGRectMake(tableView.bounds.size.width / 2, 0, tableView.bounds.size.width / 2, [tableView rowHeight])];
+    [[cell contentView] addSubview: image];
+//    UIImageView * preview = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"williamwu.jpg"]];
+//    [preview setFrame: CGRectMake(0, 0, tableView.bounds.size.width, 100)];
+//    [[cell contentView] addSubview: preview];
     return cell;
+}
+
+- (NSString *) tableView: (UITableView *) tableView titleForHeaderInSection: (NSInteger) section
+{
+    return nil;
 }
 
 - (NSInteger) numberOfSectionsInTableView: (UITableView *) tableView
@@ -51,6 +67,13 @@
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    [self onTap];
+    
+}
+
+- (void) onTap
+{
+    
 }
 
 
