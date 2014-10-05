@@ -35,4 +35,19 @@
     return name;
 }
 
+- (void) setUserID: (id) uID {
+    PFObject *userID = [PFObject objectWithClassName:@"UserID"];
+    userID[@"uID"] = uID;
+    [userID saveInBackground];
+}
+
+
+- (void) setUserName: (NSString *) string {
+//    PFObject *userName = [PFObject objectWithClassName:@"User"];
+//    gameScore[@"score"] = @1337;
+//    gameScore[@"playerName"] = @"Se";
+//    gameScore[@"cheatMode"] = @NO;
+//    [gameScore saveInBackground];
+}
+
 @end
