@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Explore.h"
 
 @interface ViewController ()
 
@@ -61,6 +62,12 @@ static bool cameraShown = NO;
     [alert addButtonWithTitle:@"OK!"];
     [alert show];
 }
+
+- (IBAction)takePicPressed:(id)sender {
+    Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
+    //    [self.navigationController pushViewController:explore animated:YES];
+}
+
 
 - (void) randomMethod
 {

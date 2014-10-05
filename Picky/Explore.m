@@ -7,6 +7,7 @@
 //
 
 #import "Explore.h"
+#import "Profile.h"
 
 @interface Explore ()
 
@@ -170,7 +171,12 @@
     {
         [_currentImage setImage: [self getNewPicture: -1]];
     }
-    [self updateRestaurant: @"RESTAURANT: THAI BASIL"];
+    [self updateRestaurant: @"Location: Thai Basil"];
+}
+
+- (IBAction)profilePressed:(UIBarButtonItem *)sender {
+    Profile *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
+    //    [self.navigationController pushViewController:profile animated:YES];
 }
 
 

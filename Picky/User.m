@@ -9,39 +9,30 @@
 #import "User.h"
 
 @implementation User
-@synthesize idnum;
 
-- (id) initWithId: (int) userid
-{
+- (id) init {
     self = [super init];
     if (self) {
-        query = [PFQuery queryWithClassName:@"user"];
-        user = [PFObject objectWithClassName:@"user"];
-        [query whereKey:@"userid" equalTo:[NSString stringWithFormat:@"%d", userid]];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                if ([objects count] != 0) {
-                    idnum = userid;
-                } else {
-                    user[@"userid"] = [NSString stringWithFormat:@"%d", userid];
-                    [user saveInBackground];
-                    idnum = userid;
-                }
-            } else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
+        query = [PFQuery queryWithClassName:@"UserID" ];
+        [query getObjectInBackgroundWithId:@"xWMyZ4YEGZ" block:^(PFObject *userID, NSError *error) {
+            // Do something with the returned PFObject in the gameScore variable.
+            NSLog(@"%@", userID);
+            user = userID;
+
         }];
     }
     return self;
 }
 
-- (NSMutableArray*) getRecentPhotofromIndex: (int) from to: (int) here
-{
-    NSMutableArray* array = [[NSMutableArray alloc] init];
-    
-    return array;
+- (int) getUserID {
+    int id = [[user objectForKey:@"ID"] intValue];
+    return id;
 }
 
 
+- (NSString*) getUserName {
+    NSString* name = [[user objectForKey:@"Name"] stringValue];
+    return name;
+}
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Meals : UIViewController
+@interface Meals : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

@@ -9,6 +9,7 @@
 #import "Profile.h"
 #import "RecentMealsCell.h"
 #import "YourPicksCell.h"
+#import "Meals.h"
 
 @interface Profile ()
 @property (weak, nonatomic) IBOutlet UILabel *profileTitle;
@@ -33,7 +34,7 @@
     if (!self.recentMealsArray) {
         self.recentMealsArray = [[NSArray alloc] init];
     }
-    
+//    [self.recentMeals reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +42,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)mealsPressed:(UIBarButtonItem *)sender {
+    Meals *meals = [self.storyboard instantiateViewControllerWithIdentifier:@"meals"];
+    //    [self.navigationController pushViewController:meals animated:YES];
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if ([collectionView isEqual:self.recentMeals]) {
-        return self.recentMealsArray.count;
+//        return self.recentMealsArray.count;
+        return 5;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
-        return self.yourPicksArray.count;
+//        return self.yourPicksArray.count;
+        return 5;
     }
     return 0;
 }
@@ -55,10 +63,29 @@
     if ([collectionView isEqual:self.recentMeals]) {
         RecentMealsCell *cell
         = [collectionView dequeueReusableCellWithReuseIdentifier:@"recentMealsCell" forIndexPath:indexPath];
+        int randNum = arc4random() % 5;
+        if (randNum == 0) {
+            cell.imageView.image = [UIImage imageNamed:@"anderstruong.jpg"];
+        }
+        else if (randNum == 1) {
+            cell.imageView.image = [UIImage imageNamed:@"logancarter.jpg"];
+        }
+        else if (randNum == 2) {
+            cell.imageView.image = [UIImage imageNamed:@"luisvasquez.jpg"];
+        }
+        else if (randNum == 3) {
+            cell.imageView.image = [UIImage imageNamed:@"williamwu.jpg"];
+        }
+        else if (randNum == 4) {
+            cell.imageView.image = [UIImage imageNamed:@"tomoueda.jpg"];
+        }
         return cell;
     }
     else if ([collectionView isEqual:self.yourPicks]) {
         YourPicksCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"yourPicksCell" forIndexPath:indexPath];
+        cell.imageView.image = [UIImage imageNamed:@"tomoueda.jpg"];
+        cell.imageView.layer.borderWidth = 2;
+        [cell.imageView.layer setBorderColor:[[UIColor blueColor] CGColor]];
         return cell;
     }
     else {
