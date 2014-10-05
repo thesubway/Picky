@@ -18,7 +18,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITextField *foodName;
 @property (weak, nonatomic) IBOutlet UITextField *restaurantName;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *submit;
+@property (weak, nonatomic) IBOutlet UIButton *oneStar;
+@property (weak, nonatomic) IBOutlet UIButton *twoStar;
+@property (weak, nonatomic) IBOutlet UIButton *threeStar;
+@property (weak, nonatomic) IBOutlet UIButton *fourStar;
+@property (weak, nonatomic) IBOutlet UIButton *fiveStar;
 
 @property double rating;
 
@@ -51,6 +57,10 @@
 {
     UITapGestureRecognizer * gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(resignResponders:)];
     [self.view addGestureRecognizer: gestureRecognizer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
 }
 
 - (void) resignResponders: (id) sender
@@ -58,6 +68,19 @@
     [_restaurantName resignFirstResponder];
     [_foodName resignFirstResponder];
 }
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [_scrollView setContentOffset:CGPointMake(0, kbSize.height) animated:YES];
+}
+//called when the text field is being edited
+- (IBAction)textFieldDidBeginEditing:(UITextField *)sender
+{
+    [sender setDelegate: self];
+}
+
 - (IBAction) onSubmit: (id) sender
 {
     int photoId = 0; // fix this
@@ -77,22 +100,47 @@
 
 - (IBAction)onOnestar:(id)sender
 {
+    [_oneStar setTitle: @"★" forState: UIControlStateNormal];
+    [_twoStar setTitle: @"☆" forState: UIControlStateNormal];
+    [_threeStar setTitle: @"☆" forState: UIControlStateNormal];
+    [_fourStar setTitle: @"☆" forState: UIControlStateNormal];
+    [_fiveStar setTitle: @"☆" forState: UIControlStateNormal];
     _rating = 1.0;
 }
 - (IBAction)onTwostars:(id)sender
 {
+    [_oneStar setTitle: @"★" forState: UIControlStateNormal];
+    [_twoStar setTitle: @"★" forState: UIControlStateNormal];
+    [_threeStar setTitle: @"☆" forState: UIControlStateNormal];
+    [_fourStar setTitle: @"☆" forState: UIControlStateNormal];
+    [_fiveStar setTitle: @"☆" forState: UIControlStateNormal];
     _rating = 2.0;
 }
 - (IBAction)onThreestars:(id)sender
 {
+    [_oneStar setTitle: @"★" forState: UIControlStateNormal];
+    [_twoStar setTitle: @"★" forState: UIControlStateNormal];
+    [_threeStar setTitle: @"★" forState: UIControlStateNormal];
+    [_fourStar setTitle: @"☆" forState: UIControlStateNormal];
+    [_fiveStar setTitle: @"☆" forState: UIControlStateNormal];
     _rating = 3.0;
 }
 - (IBAction)onFourstars:(id)sender
 {
+    [_oneStar setTitle: @"★" forState: UIControlStateNormal];
+    [_twoStar setTitle: @"★" forState: UIControlStateNormal];
+    [_threeStar setTitle: @"★" forState: UIControlStateNormal];
+    [_fourStar setTitle: @"★" forState: UIControlStateNormal];
+    [_fiveStar setTitle: @"☆" forState: UIControlStateNormal];
     _rating = 4.0;
 }
 - (IBAction)onFivestars:(id)sender
 {
+    [_oneStar setTitle: @"★" forState: UIControlStateNormal];
+    [_twoStar setTitle: @"★" forState: UIControlStateNormal];
+    [_threeStar setTitle: @"★" forState: UIControlStateNormal];
+    [_fourStar setTitle: @"★" forState: UIControlStateNormal];
+    [_fiveStar setTitle: @"★" forState: UIControlStateNormal];
     _rating = 5.0;
 }
 
