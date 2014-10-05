@@ -56,29 +56,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explore Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1R2-W9-k7o">
-                                <rect key="frame" x="109" y="61" width="103" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-Jg-opT">
-                                <rect key="frame" x="25" y="95" width="271" height="276"/>
+                                <rect key="frame" x="25" y="98" width="271" height="276"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location: Koja" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq1-05-ATA">
-                                <rect key="frame" x="25" y="416" width="271" height="21"/>
+                                <rect key="frame" x="25" y="419" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food: 炒麵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dui-0S-GYl">
-                                <rect key="frame" x="25" y="387" width="271" height="21"/>
+                                <rect key="frame" x="25" y="390" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating: ★ ★ ★ ★ ★ " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBB-vk-sTW">
-                                <rect key="frame" x="25" y="445" width="271" height="21"/>
+                                <rect key="frame" x="25" y="448" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,7 +80,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3bf-kE-Fzv">
+                    <navigationItem key="navigationItem" title="Explore" id="3bf-kE-Fzv">
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="g7V-Xo-vZ0">
                             <connections>
                                 <action selector="profilePressed:" destination="RCP-Ra-OBB" id="Pb2-zs-LKv"/>
@@ -96,7 +90,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="currentImage" destination="Oap-Jg-opT" id="oSd-hK-RMr"/>
-                        <outlet property="exploreTitle" destination="1R2-W9-k7o" id="g7h-qb-IhS"/>
                         <outlet property="restaurantName" destination="Aq1-05-ATA" id="o4n-Y6-fhN"/>
                     </connections>
                 </viewController>
@@ -116,32 +109,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m57-26-ZoH">
-                                <rect key="frame" x="126" y="54" width="79" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEs-FE-Bzu">
-                                <rect key="frame" x="141" y="97" width="48" height="26"/>
+                                <rect key="frame" x="141" y="72" width="48" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Picks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ3-rE-Qyi">
-                                <rect key="frame" x="16" y="333" width="81" height="21"/>
+                                <rect key="frame" x="16" y="308" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Meals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw5-7k-Be2">
-                                <rect key="frame" x="16" y="126" width="105" height="21"/>
+                                <rect key="frame" x="16" y="101" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wKz-eC-3Gr">
-                                <rect key="frame" x="16" y="155" width="288" height="170"/>
+                                <rect key="frame" x="16" y="130" width="288" height="170"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9jj-Oe-25z">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -170,7 +157,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZB3-fX-m78">
-                                <rect key="frame" x="16" y="362" width="288" height="170"/>
+                                <rect key="frame" x="16" y="337" width="288" height="170"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2jK-tc-9Ij">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -201,7 +188,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XA3-gk-4wF">
+                    <navigationItem key="navigationItem" title="Profile" id="XA3-gk-4wF">
                         <barButtonItem key="rightBarButtonItem" title="Meals" id="KQ2-Th-ySt">
                             <connections>
                                 <action selector="mealsPressed:" destination="LEV-FX-bHu" id="vUI-gK-5zd"/>
@@ -211,7 +198,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="label2" destination="aQ3-rE-Qyi" id="6vy-5r-UWt"/>
-                        <outlet property="profileTitle" destination="m57-26-ZoH" id="jAR-Hs-GZf"/>
                         <outlet property="recentMeals" destination="wKz-eC-3Gr" id="x12-no-hwv"/>
                         <outlet property="yourPicks" destination="ZB3-fX-m78" id="uZE-xL-rmE"/>
                     </connections>
@@ -245,7 +231,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pka-NI-1hy"/>
+                    <navigationItem key="navigationItem" title="Meals" id="Pka-NI-1hy"/>
                     <connections>
                         <outlet property="mealsTable" destination="fit-Fe-jmq" id="kTJ-Vl-d7r"/>
                         <outlet property="mealsTitle" destination="sdJ-Vn-XnG" id="tme-MR-ZME"/>
@@ -383,6 +369,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="n1a-Yl-gQh"/>
+        <segue reference="GxS-VH-TFg"/>
     </inferredMetricsTieBreakers>
 </document>

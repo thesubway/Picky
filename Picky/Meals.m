@@ -31,7 +31,7 @@
 
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath
 {
-    UITableViewCell * cell = [[UITableViewCell alloc] init];
+    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"cell"];
     UIImageView * preview = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"williamwu.jpg"]];
     [preview setFrame: cell.frame];
     [[cell contentView] addSubview: preview];
@@ -46,6 +46,11 @@
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section
 {
     return 3;
+}
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
+{
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
 
 
