@@ -26,7 +26,14 @@
 @property NSInteger retrievedUserid;
 @property bool retrieved;
 
-
+-(void) uploadPhotoDataid:(int) photoid
+                locationx:(double) x
+                locationy:(double) y
+                   rating:(double) rating
+               restaurant:(NSString*) restaurant
+                    title:(NSString*) title
+                    image:(NSData*) imageData
+                     user:(NSInteger) userid;
 - (void) fillFieldFromDataBaseWithID: (int) photoid;
 - (double) getRetrievedRating;
 - (double) getRetrievedX;
