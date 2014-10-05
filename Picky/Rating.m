@@ -39,7 +39,7 @@
     [alert addButtonWithTitle:@"OK!"];
     [alert show];
     // Do any additional setup after loading the view.
-    [_image setImage: [UIImage imageNamed: @"recent.jpg"]];
+//    [_image setImage: [UIImage imageNamed: @"recent.jpg"]];
 }
 
 - (IBAction) onSubmit: (id) sender
