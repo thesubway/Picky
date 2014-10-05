@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         query = [PFQuery queryWithClassName:@"photo"];
-        photo = [PFObject objectWithClassName:@"photo"];
+//        photo = [PFObject objectWithClassName:@"photo"];
         retrieved = false;
     }
     return self;
@@ -40,6 +40,7 @@
     PFFile* imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
+            PFObject* photo = [PFObject objectWithClassName:@"photo"];
             [photo setObject:imageFile forKey:@"imageFile"];
             photo.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
             [photo setObject:[NSNumber numberWithInt:photoid] forKey:@"id"];
