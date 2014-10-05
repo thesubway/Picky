@@ -1,5 +1,5 @@
 //
-//  Meal.h
+//  MealDatabase.h
 //  Picky
 //
 //  Created by Logan Carter on 10/4/14.
@@ -9,14 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
-@interface Meal : NSObject
+@interface MealDatabase : NSObject
 {
-    @private
+@private
     PFQuery* query;
     PFObject* meal;
-    int numratings;
-    float avgrating;
-    NSArray *photos;
 }
-    
+
+@property int numratings;
+@property float avgrating;
+@property NSArray *photos;
+@property NSString *mealName;
+@property NSString *restaurantName;
+
 @end

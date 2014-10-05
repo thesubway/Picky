@@ -110,6 +110,10 @@
     return retrievedUserid;
 }
 
+- (bool) getRetrieved {
+    return retrieved;
+}
+
 
 
 @end

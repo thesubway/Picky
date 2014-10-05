@@ -16,7 +16,7 @@
 		3DF7BC6619E0A5BF002CEF35 /* logancarter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7BC6219E0A5BF002CEF35 /* logancarter.jpg */; };
 		3DF7BC6719E0A5BF002CEF35 /* luisvasquez.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7BC6319E0A5BF002CEF35 /* luisvasquez.jpg */; };
 		3DF7BC6819E0A5BF002CEF35 /* williamwu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7BC6419E0A5BF002CEF35 /* williamwu.jpg */; };
-		5994D90419E0B2B700A2CAC9 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5994D90319E0B2B700A2CAC9 /* Meal.m */; };
+		5994D90719E0E3A400A2CAC9 /* MealDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5994D90619E0E3A400A2CAC9 /* MealDatabase.m */; };
 		6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388B19DF9EDA00BD1CF6 /* main.m */; };
 		6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44388E19DF9EDA00BD1CF6 /* AppDelegate.m */; };
 		6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C44389119DF9EDA00BD1CF6 /* ViewController.m */; };
@@ -68,8 +68,8 @@
 		3DF7BC6219E0A5BF002CEF35 /* logancarter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logancarter.jpg; sourceTree = "<group>"; };
 		3DF7BC6319E0A5BF002CEF35 /* luisvasquez.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = luisvasquez.jpg; sourceTree = "<group>"; };
 		3DF7BC6419E0A5BF002CEF35 /* williamwu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = williamwu.jpg; sourceTree = "<group>"; };
-		5994D90219E0B2B700A2CAC9 /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
-		5994D90319E0B2B700A2CAC9 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		5994D90519E0E3A400A2CAC9 /* MealDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealDatabase.h; sourceTree = "<group>"; };
+		5994D90619E0E3A400A2CAC9 /* MealDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealDatabase.m; sourceTree = "<group>"; };
 		6C44388619DF9EDA00BD1CF6 /* Picky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C44388A19DF9EDA00BD1CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C44388B19DF9EDA00BD1CF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 				6C56F5D319DFFE75006F907A /* User.m */,
 				6C4E35A819E0C15F003B506B /* PhotoDatabase.h */,
 				6C4E35A919E0C15F003B506B /* PhotoDatabase.m */,
-				5994D90219E0B2B700A2CAC9 /* Meal.h */,
-				5994D90319E0B2B700A2CAC9 /* Meal.m */,
+				5994D90519E0E3A400A2CAC9 /* MealDatabase.h */,
+				5994D90619E0E3A400A2CAC9 /* MealDatabase.m */,
 				A0A5080F19E0B2BC00F64C6E /* Photo.h */,
 				A0A5081019E0B2BC00F64C6E /* Photo.m */,
 			);
@@ -391,13 +391,13 @@
 			files = (
 				6C56F5D419DFFE75006F907A /* User.m in Sources */,
 				6C4E35AA19E0C15F003B506B /* PhotoDatabase.m in Sources */,
-				5994D90419E0B2B700A2CAC9 /* Meal.m in Sources */,
 				3DF7BC5D19E004B9002CEF35 /* Meals.m in Sources */,
 				6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */,
 				3DF7BC5A19E0042E002CEF35 /* Profile.m in Sources */,
 				6C44388F19DF9EDA00BD1CF6 /* AppDelegate.m in Sources */,
 				6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */,
 				3DF7BC6019E007F8002CEF35 /* Rating.m in Sources */,
+				5994D90719E0E3A400A2CAC9 /* MealDatabase.m in Sources */,
 				3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */,
 				A0A5081119E0B2BC00F64C6E /* Photo.m in Sources */,
 				6D2CE1EA19E0AC0100FFB0C6 /* RecentMealsCell.m in Sources */,
