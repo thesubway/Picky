@@ -81,7 +81,7 @@ static bool cameraShown = NO;
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 //            [self.navigationController pushViewController:rating animated:YES];
 //        [self.storyboard instantiateViewControllerWithIdentifier: @"rating"];
-        [self presentViewController: rating animated: NO completion: nil];
+        [self presentViewController: [self.storyboard instantiateViewControllerWithIdentifier: @"rating"] animated: NO completion: nil];
         
 //        });
     }];
