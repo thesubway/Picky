@@ -39,6 +39,7 @@
 		6C56F5DA19E0A968006F907A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C56F5D919E0A968006F907A /* ParseFacebookUtils.framework */; };
 		6D2CE1EA19E0AC0100FFB0C6 /* RecentMealsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CE1E919E0AC0100FFB0C6 /* RecentMealsCell.m */; };
 		6D2CE1ED19E0AC3A00FFB0C6 /* YourPicksCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CE1EC19E0AC3A00FFB0C6 /* YourPicksCell.m */; };
+		A0A5081119E0B2BC00F64C6E /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A5081019E0B2BC00F64C6E /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		6D2CE1E919E0AC0100FFB0C6 /* RecentMealsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentMealsCell.m; sourceTree = "<group>"; };
 		6D2CE1EB19E0AC3A00FFB0C6 /* YourPicksCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourPicksCell.h; sourceTree = "<group>"; };
 		6D2CE1EC19E0AC3A00FFB0C6 /* YourPicksCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourPicksCell.m; sourceTree = "<group>"; };
+		A0A5080F19E0B2BC00F64C6E /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		A0A5081019E0B2BC00F64C6E /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 			children = (
 				6C56F5D219DFFE75006F907A /* User.h */,
 				6C56F5D319DFFE75006F907A /* User.m */,
+				A0A5080F19E0B2BC00F64C6E /* Photo.h */,
+				A0A5081019E0B2BC00F64C6E /* Photo.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				6C44388C19DF9EDA00BD1CF6 /* main.m in Sources */,
 				3DF7BC6019E007F8002CEF35 /* Rating.m in Sources */,
 				3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */,
+				A0A5081119E0B2BC00F64C6E /* Photo.m in Sources */,
 				6D2CE1EA19E0AC0100FFB0C6 /* RecentMealsCell.m in Sources */,
 				6D2CE1ED19E0AC3A00FFB0C6 /* YourPicksCell.m in Sources */,
 			);

@@ -17,8 +17,4 @@
     PFObject* user;
 }
 
-@property NSInteger idnum;
-
--(id) initWithId:(int) idnum;
-
 @end
