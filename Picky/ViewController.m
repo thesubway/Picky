@@ -90,7 +90,8 @@ static bool cameraShown = NO;
 
 - (IBAction)takePicPressed:(id)sender {
     Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
-        [self.navigationController pushViewController:explore animated:YES];
+//        [self.navigationController pushViewController:explore animated:YES];
+    [self presentViewController: [self.storyboard instantiateViewControllerWithIdentifier: @"explore"] animated: NO completion: nil];
 }
 
 
