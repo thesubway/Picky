@@ -68,7 +68,7 @@
 - (void) initScroll
 {
     [_scrollView setScrollEnabled: YES];
-    [_scrollView setContentSize: CGSizeMake([_scrollView frame].size.width, [_scrollView frame].size.height* 2)];
+    [_scrollView setContentSize: CGSizeMake([_scrollView frame].size.width, [_scrollView frame].size.height)];
     [_scrollView setUserInteractionEnabled: YES];
 }
 
