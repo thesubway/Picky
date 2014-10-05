@@ -41,6 +41,7 @@
     self.image.image = self.displayImage;
     _rating = 0.0;
     [self initGestures];
+    [self initScroll];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -62,6 +63,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
                                                  name:UIKeyboardDidShowNotification object:nil];
+}
+
+- (void) initScroll
+{
+    [_scrollView setScrollEnabled: YES];
+    [_scrollView setUserInteractionEnabled: YES];
 }
 
 - (void) resignResponders: (id) sender
