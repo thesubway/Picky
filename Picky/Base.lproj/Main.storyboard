@@ -295,6 +295,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="onSubmit:" destination="zjn-rN-a1f" eventType="touchUpInside" id="gXP-Wf-8hC"/>
                                     <segue destination="RCP-Ra-OBB" kind="modal" id="n1a-Yl-gQh"/>
                                 </connections>
                             </button>

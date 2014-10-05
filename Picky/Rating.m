@@ -7,21 +7,27 @@
 //
 
 #import "Rating.h"
+#import "PhotoDatabase.h"
 
 @interface Rating ()
+{
+    @private
+        PhotoDatabase * database;
+}
 @property (weak, nonatomic) IBOutlet UILabel *ratingTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITextField *foodName;
 @property (weak, nonatomic) IBOutlet UIButton *submit;
 
 
+
 @end
 
 @implementation Rating
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    database = [[PhotoDatabase alloc] init];
     self.image.image = self.displayImage;
 }
 
@@ -38,9 +44,21 @@
 
 - (IBAction) onSubmit: (id) sender
 {
-    /* YOUR CODE HERE */
+//uploadPhotoDataid:(int) photoid
+//locationx:(double) x
+//locationy:(double) y
+//rating:(double) rating
+//restaurant:(NSString*) restaurant
+//title:(NSString*) title
+//image:(NSData*) imageData
+//user:(NSInteger) userid
 
+    int photoId = 0; // fix this
+    double x = 0.0;
+    double y = 0.0;
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
