@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, FBLoginViewDelegate>
 
 @property UIImagePickerController *imgPicker;
 @property UIImage *currentImage;

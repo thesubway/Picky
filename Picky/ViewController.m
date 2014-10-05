@@ -14,6 +14,7 @@
 
 @interface ViewController ()
 @property User *currentUser;
+@property FBLoginView *loginView;
 @end
 @implementation ViewController
 
@@ -21,6 +22,11 @@ static bool cameraShown = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentUser = [[User alloc] init];
+    _loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"email"]];
+    _loginView.delegate = self;
+    _loginView.frame = CGRectOffset(_loginView.frame, (self.view.center.x - (_loginView.frame.size.width / 2)), self.view.center.y);
+    [self.view addSubview:_loginView];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -95,5 +101,20 @@ static bool cameraShown = NO;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
+}
+
+
 
 @end
