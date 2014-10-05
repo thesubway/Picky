@@ -122,6 +122,10 @@
     else if (self.rating == 5.0) {
         explore.ratingStars = @"Rating: ★ ★ ★ ★ ★ ";
     }
+//    explore.ratedFoodName = @"Food: %@",self.foodName.text;
+    explore.ratedFoodName = [NSString stringWithFormat:@"Food: %@", self.foodName.text];
+    explore.ratedLocation = [NSString stringWithFormat:@"Location: %@", self.restaurantName.text];
+    explore.ratedImage = self.image.image;
     [self.navigationController pushViewController:explore animated:YES];
 }
 

@@ -11,5 +11,8 @@
 @interface Explore : UIViewController
 
 @property NSString *ratingStars;
+@property NSString *ratedFoodName;
+@property NSString *ratedLocation;
+@property UIImage *ratedImage;
 
 @end

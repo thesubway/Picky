@@ -14,6 +14,8 @@
 @interface Explore ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *currentImage;
+@property (strong, nonatomic) IBOutlet UILabel *foodTitle;
+
 @property (weak, nonatomic) IBOutlet UILabel *exploreTitle;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantName;
 @property (strong, nonatomic) IBOutlet UILabel *ratingLabel;
@@ -36,6 +38,15 @@
     [_currentImage setImage: image];
     if (self.ratingStars != nil) {
         self.ratingLabel.text = self.ratingStars;
+    }
+    if (self.ratedFoodName != nil) {
+        self.foodTitle.text = self.ratedFoodName;
+    }
+    if (self.ratedLocation != nil) {
+        self.restaurantName.text = self.ratedLocation;
+    }
+    if (self.ratedImage != nil) {
+        self.currentImage.image = self.ratedImage;
     }
 }
 

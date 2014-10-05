@@ -106,6 +106,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="currentImage" destination="Oap-Jg-opT" id="oSd-hK-RMr"/>
+                        <outlet property="foodTitle" destination="dui-0S-GYl" id="mxD-vD-Jds"/>
                         <outlet property="ratingLabel" destination="lBB-vk-sTW" id="k41-89-ivw"/>
                         <outlet property="restaurantName" destination="Aq1-05-ATA" id="o4n-Y6-fhN"/>
                     </connections>
