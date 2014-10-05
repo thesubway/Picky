@@ -33,6 +33,7 @@
     database = [[PhotoDatabase alloc] init];
     self.image.image = self.displayImage;
     _rating = 0.0;
+    [self initGestures];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -44,6 +45,18 @@
     [alert show];
     // Do any additional setup after loading the view.
 //    [_image setImage: [UIImage imageNamed: @"recent.jpg"]];
+}
+
+- (void) initGestures
+{
+    UITapGestureRecognizer * gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(resignResponders:)];
+    [self.view addGestureRecognizer: gestureRecognizer];
+}
+
+- (void) resignResponders: (id) sender
+{
+    [_restaurantName resignFirstResponder];
+    [_foodName resignFirstResponder];
 }
 
 - (IBAction) onSubmit: (id) sender
