@@ -58,18 +58,8 @@
     [_restaurantName resignFirstResponder];
     [_foodName resignFirstResponder];
 }
-
 - (IBAction) onSubmit: (id) sender
 {
-//uploadPhotoDataid:(int) photoid
-//locationx:(double) x
-//locationy:(double) y
-//rating:(double) rating
-//restaurant:(NSString*) restaurant
-//title:(NSString*) title
-//image:(NSData*) imageData
-//user:(NSInteger) userid
-
     int photoId = 0; // fix this
     NSInteger userId = 0; // just your facebook id
     double x = 0.0;
