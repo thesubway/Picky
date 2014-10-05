@@ -7,11 +7,7 @@
         <!--Pages-->
         <scene sceneID="RKI-df-l01">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="PcI-rU-0Do" customClass="Pages" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="RCP-Ra-OBB" kind="push" id="1rE-lB-AsV"/>
-                    </connections>
-                </pageViewController>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="PcI-rU-0Do" customClass="Pages" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4U-a7-yrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="-585"/>
@@ -438,7 +434,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="1rE-lB-AsV"/>
-    </inferredMetricsTieBreakers>
 </document>

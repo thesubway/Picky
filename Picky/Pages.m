@@ -7,6 +7,11 @@
 //
 
 #import "Pages.h"
+#import "ViewController.h"
+#import "Explore.h"
+#import "Profile.h"
+#import "Meals.h"
+#import "Rating.h"
 
 @interface Pages ()
 
@@ -18,26 +23,43 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setDataSource: self];
-    [self setViewControllers: @[[self.storyboard instantiateViewControllerWithIdentifier: @"viewController"]] direction: UIPageViewControllerNavigationDirectionForward animated: YES completion: nil];
+    [self setViewControllers: @[[self.storyboard instantiateViewControllerWithIdentifier: @"viewController"]] direction: UIPageViewControllerNavigationDirectionForward animated: NO completion: nil];
 }
 
 
-//- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
-//{
-//    if ([viewController isKindOfClass:[PageOneViewController class]])
-//        return nil;
-//    
-//    return [self.storyboard instantiateViewControllerWithIdentifier:@"one"];
-//}
-//
-//- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-//{
-//    if ([viewController isKindOfClass:[PageTwoViewController class]])
-//        return nil;
-//    
-//    return [self.storyboard instantiateViewControllerWithIdentifier:@"two"];
-//}
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    if ([viewController isKindOfClass: [ViewController class]])
+    {
+        return [self.storyboard instantiateViewControllerWithIdentifier: @"explore"];
+    }
+    if ([viewController isKindOfClass: [Profile class]])
+    {
+        return [self.storyboard instantiateViewControllerWithIdentifier: @"explore"];
+    }
+    if ([viewController isKindOfClass: [Meals class]])
+    {
+        return [self.storyboard instantiateViewControllerWithIdentifier: @"profile"];
+    }
+    return nil;
+}
 
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    if ([viewController isKindOfClass: [ViewController class]])
+    {
+        return [self.storyboard instantiateViewControllerWithIdentifier: @"explore"];
+    }
+    if ([viewController isKindOfClass: [Explore class]])
+    {
+        return [self.storyboard instantiateViewControllerWithIdentifier: @"profile"];
+    }
+    if ([viewController isKindOfClass: [Profile class]])
+    {
+        return [self.storyboard instantiateViewControllerWithIdentifier: @"meals"];
+    }
+    return nil;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
