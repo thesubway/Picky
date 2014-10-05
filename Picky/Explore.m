@@ -152,12 +152,42 @@
     }
     if (direction == -1)
     {
+        UIImage * closestFood = [UIImage imageNamed: @"tomoueda.jpg"]; //would be "closest food"
+
+//        if (_imageIndex == 0)
+//        {
+//            _imageIndex++;
+//            NSLog(@"%d", _imageIndex);
+//            return [_imageCache objectAtIndex: _imageIndex];
+//        }
+//        if (!(_imageIndex > 0))
+//        {
+//            return NO;
+//        }
         NSLog(@"swipe right");
+        if ([_imageCache count] == 0)
+        {
+            _imageIndex++;
+            [_imageCache addObject: closestFood];
+            NSLog(@"%d", _imageIndex);
+            return closestFood;
+        }
         if (_imageIndex > 0)
         {
             _imageIndex--;
             NSLog(@"%d", _imageIndex);
             return [_imageCache objectAtIndex: _imageIndex];
+        }
+        else {
+            if (_imageIndex == 0)
+            {
+                return closestFood;
+            }
+            else {
+                _imageIndex++;
+                NSLog(@"%d", _imageIndex);
+                return [_imageCache objectAtIndex: _imageIndex];
+            }
         }
     }
     return image;
@@ -181,7 +211,7 @@
 
 - (IBAction)profilePressed:(UIBarButtonItem *)sender {
     Profile *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
-//        [self.navigationController pushViewController:profile animated:YES];
+        [self.navigationController pushViewController:profile animated:YES];
 }
 
 /*

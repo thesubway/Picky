@@ -44,7 +44,7 @@
 
 - (IBAction)mealsPressed:(UIBarButtonItem *)sender {
     Meals *meals = [self.storyboard instantiateViewControllerWithIdentifier:@"meals"];
-    //    [self.navigationController pushViewController:meals animated:YES];
+        [self.navigationController pushViewController:meals animated:YES];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

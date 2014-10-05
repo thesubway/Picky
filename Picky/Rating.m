@@ -9,6 +9,7 @@
 #import "Rating.h"
 #import "PhotoDatabase.h"
 #import "ViewController.h"
+#import "Explore.h"
 
 @interface Rating ()
 {
@@ -104,6 +105,8 @@
                           title: [_foodName text]
                           image: UIImageJPEGRepresentation(self.displayImage, 1.0)
                            user: userId];
+    Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
+    [self.navigationController pushViewController:explore animated:YES];
 }
 
 

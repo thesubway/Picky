@@ -95,7 +95,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="g7V-Xo-vZ0">
                             <connections>
                                 <action selector="profilePressed:" destination="RCP-Ra-OBB" id="Pb2-zs-LKv"/>
-                                <segue destination="LEV-FX-bHu" kind="push" id="aoD-7x-Br6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -203,7 +202,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Meals" id="KQ2-Th-ySt">
                             <connections>
                                 <action selector="mealsPressed:" destination="LEV-FX-bHu" id="vUI-gK-5zd"/>
-                                <segue destination="dp3-99-wQX" kind="push" id="Ish-li-Bdu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -343,7 +341,6 @@
                                         </state>
                                         <connections>
                                             <action selector="onSubmit:" destination="zjn-rN-a1f" eventType="touchUpInside" id="JAW-nJ-aUY"/>
-                                            <segue destination="RCP-Ra-OBB" kind="modal" id="n1a-Yl-gQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzs-AC-RXs">
@@ -417,7 +414,6 @@
         <!--Navigation Controller-->
         <scene sceneID="duc-tz-YKm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ccS-39-XXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RgU-uJ-BPn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pB4-pf-2cT">
@@ -429,6 +425,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="7E1-t8-ut5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccS-39-XXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="74" y="153"/>
         </scene>
