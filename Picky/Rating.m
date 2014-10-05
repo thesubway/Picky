@@ -21,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [_image setImage: [UIImage imageNamed: @"recent.jpg"]];
+}
+
+- (IBAction) onSubmit: (id) sender
+{
+    /* YOUR CODE HERE */
 }
 
 - (void)didReceiveMemoryWarning {
