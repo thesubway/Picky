@@ -62,10 +62,12 @@ static bool cameraShown = NO;
     [alert addButtonWithTitle:@"OK!"];
     [alert show];
 }
-- (IBAction)takePicPressed:(UIButton *)sender {
+
+- (IBAction)takePicPressed:(id)sender {
     Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
-    [self.navigationController pushViewController:explore animated:YES];
+    //    [self.navigationController pushViewController:explore animated:YES];
 }
+
 
 - (void) randomMethod
 {
