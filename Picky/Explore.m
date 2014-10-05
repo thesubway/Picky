@@ -8,6 +8,7 @@
 
 #import "Explore.h"
 #import "Profile.h"
+#import "PhotoDatabase.h"
 
 @interface Explore ()
 
