@@ -17,7 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *ratingTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITextField *foodName;
+@property (weak, nonatomic) IBOutlet UITextField *restaurantName;
 @property (weak, nonatomic) IBOutlet UIButton *submit;
+
+@property double rating;
 
 
 
@@ -29,6 +32,7 @@
     [super viewDidLoad];
     database = [[PhotoDatabase alloc] init];
     self.image.image = self.displayImage;
+    _rating = 0.0;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -54,10 +58,41 @@
 //user:(NSInteger) userid
 
     int photoId = 0; // fix this
+    int userId = 0; // just your facebook id
     double x = 0.0;
     double y = 0.0;
-    
+    [database uploadPhotoDataid: photoId
+                      locationx: x
+                      locationy: y
+                         rating: _rating
+                     restaurant: [_restaurantName text]
+                          title: [_foodName text]
+                          image: UIImageJPEGRepresentation(self.displayImage, 1.0)
+                           user: userId];
 }
+
+
+- (IBAction)onOnestar:(id)sender
+{
+    _rating = 1.0;
+}
+- (IBAction)onTwostars:(id)sender
+{
+    _rating = 2.0;
+}
+- (IBAction)onThreestars:(id)sender
+{
+    _rating = 3.0;
+}
+- (IBAction)onFourstars:(id)sender
+{
+    _rating = 4.0;
+}
+- (IBAction)onFivestars:(id)sender
+{
+    _rating = 5.0;
+}
+
 
 
 - (void)didReceiveMemoryWarning {
