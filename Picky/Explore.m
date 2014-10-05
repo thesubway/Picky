@@ -31,6 +31,7 @@
     [self initCache];
     
     UIImage * image = [UIImage imageNamed: @"tomoueda.jpg"];
+    _imageIndex = -1;
     [_currentImage setImage: image];
 }
 
@@ -180,7 +181,7 @@
 
 - (IBAction)profilePressed:(UIBarButtonItem *)sender {
     Profile *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
-    //    [self.navigationController pushViewController:profile animated:YES];
+//        [self.navigationController pushViewController:profile animated:YES];
 }
 
 /*
