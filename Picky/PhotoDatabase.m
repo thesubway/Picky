@@ -49,6 +49,7 @@
             [photo setObject:[NSNumber numberWithDouble:rating] forKey:@"rating"];
             [photo setObject:restaurant forKey:@"restaurant"];
             [photo setObject:title forKey:@"title"];
+            [photo saveInBackground];
         } else {
               NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
