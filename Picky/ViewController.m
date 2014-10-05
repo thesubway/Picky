@@ -8,15 +8,17 @@
 
 #import "ViewController.h"
 #import "Explore.h"
+#import "User.h"
 
 @interface ViewController ()
-
+@property User *currentUser;
 @end
 @implementation ViewController
 
 static bool cameraShown = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.currentUser = [[User alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -55,6 +57,9 @@ static bool cameraShown = NO;
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:^{
         //save image data.
+        UIImage *takenImage = info[UIImagePickerControllerOriginalImage];
+        NSData* imageData = UIImagePNGRepresentation(takenImage);
+//        int curUserID = [self.currentUser getUserID];
     }];
     UIAlertView *alert = [[UIAlertView alloc] init];
     alert.title = @"";
