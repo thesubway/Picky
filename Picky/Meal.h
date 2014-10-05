@@ -14,6 +14,9 @@
     @private
     PFQuery* query;
     PFObject* meal;
+    int numratings;
+    float avgrating;
+    NSArray *photos;
 }
     
 @end
