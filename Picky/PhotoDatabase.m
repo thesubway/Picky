@@ -51,7 +51,8 @@
             [photo setObject:title forKey:@"title"];
             [photo saveInBackground];
         } else {
-              NSLog(@"Error: %@ %@", error, [error userInfo]);
+            NSLog(@"we are definitely here.");
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
         
     }];
