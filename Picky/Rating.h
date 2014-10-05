@@ -10,4 +10,6 @@
 
 @interface Rating : UIViewController
 
+@property UIImage *displayImage;
+
 @end

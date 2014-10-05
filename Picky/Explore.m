@@ -9,6 +9,7 @@
 #import "Explore.h"
 #import "Profile.h"
 #import "PhotoDatabase.h"
+#import "Rating.h"
 
 @interface Explore ()
 
@@ -179,7 +180,6 @@
     Profile *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
     //    [self.navigationController pushViewController:profile animated:YES];
 }
-
 
 /*
 #pragma mark - Navigation

@@ -14,13 +14,23 @@
 @property (weak, nonatomic) IBOutlet UITextField *foodName;
 @property (weak, nonatomic) IBOutlet UIButton *submit;
 
+
 @end
 
 @implementation Rating
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.image.image = self.displayImage;
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    UIAlertView *alert = [[UIAlertView alloc] init];
+    alert.title = @"";
+    alert.message = @"Enjoy your food!";
+    [alert addButtonWithTitle:@"OK!"];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {
