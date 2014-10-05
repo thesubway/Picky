@@ -14,7 +14,7 @@
 {
 @private
     PFQuery* query;
-    PFObject* photo;
+//    PFObject* photo;
 }
 
 @property double retrievedRating;
