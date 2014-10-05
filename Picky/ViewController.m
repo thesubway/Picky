@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Explore.h"
 #import "User.h"
+#import "Rating.h"
+#import "Profile.h"
 
 @interface ViewController ()
 @property User *currentUser;
@@ -58,19 +60,24 @@ static bool cameraShown = NO;
     [picker dismissViewControllerAnimated:YES completion:^{
         //save image data.
         UIImage *takenImage = info[UIImagePickerControllerOriginalImage];
-        NSData* imageData = UIImagePNGRepresentation(takenImage);
-//        int curUserID = [self.currentUser getUserID];
+        NSData * imageData = UIImageJPEGRepresentation(takenImage, 1.0);
+        
+        
+        //save to the default 100Apple(Camera Roll) folder.
+        
+        [imageData writeToFile:@"resources/images/recent.jpg" atomically:NO];
+        Rating *rating = [self.storyboard instantiateViewControllerWithIdentifier:@"rating"];
+        rating.displayImage = takenImage;
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self.navigationController pushViewController:rating animated:YES];
+//        });
     }];
-    UIAlertView *alert = [[UIAlertView alloc] init];
-    alert.title = @"";
-    alert.message = @"Enjoy your food!";
-    [alert addButtonWithTitle:@"OK!"];
-    [alert show];
+    
 }
 
 - (IBAction)takePicPressed:(id)sender {
     Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
-    //    [self.navigationController pushViewController:explore animated:YES];
+        [self.navigationController pushViewController:explore animated:YES];
 }
 
 

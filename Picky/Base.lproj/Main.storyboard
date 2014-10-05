@@ -35,7 +35,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Take Picture" id="mZm-nz-Rcr">
                             <connections>
                                 <action selector="takePicPressed:" destination="vXZ-lx-hvc" id="W2Y-pN-CFX"/>
-                                <segue destination="RCP-Ra-OBB" kind="push" id="GxS-VH-TFg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -241,51 +240,77 @@
             </objects>
             <point key="canvasLocation" x="1890" y="153"/>
         </scene>
-        <!--Rating-->
-        <scene sceneID="hrg-Ol-Caw">
+        <!--View Controller-->
+        <scene sceneID="FrK-PO-Mr9">
             <objects>
-                <viewController id="kTp-IB-yqk" customClass="Rating" sceneMemberID="viewController">
+                <viewController id="0Et-OO-Vwa" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bqf-OY-pgg"/>
-                        <viewControllerLayoutGuide type="bottom" id="icy-Ys-x3F"/>
+                        <viewControllerLayoutGuide type="top" id="S0o-3i-5Lr"/>
+                        <viewControllerLayoutGuide type="bottom" id="msZ-JD-cTZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BFo-m6-28z">
+                    <view key="view" contentMode="scaleToFill" id="SCd-aP-A2o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aev-xr-QnP">
+                                <rect key="frame" x="139" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZvV-59-4Rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="791"/>
+        </scene>
+        <!--Rating-->
+        <scene sceneID="nQN-wV-NxM">
+            <objects>
+                <viewController storyboardIdentifier="rating" id="zjn-rN-a1f" customClass="Rating" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GsC-bY-rCM"/>
+                        <viewControllerLayoutGuide type="bottom" id="TkH-pz-uxK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9tP-SQ-9rc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate Your Meal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-wd-pPo">
-                                <rect key="frame" x="104" y="20" width="117" height="21"/>
+                                <rect key="frame" x="102" y="28" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-c3-s9W">
-                                <rect key="frame" x="27" y="55" width="271" height="193"/>
+                                <rect key="frame" x="25" y="63" width="271" height="193"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What did you eat?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGg-hc-3g6">
-                                <rect key="frame" x="91" y="351" width="140" height="21"/>
+                                <rect key="frame" x="89" y="359" width="140" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kung Pao Chicken" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-9A-gHZ">
-                                <rect key="frame" x="92" y="373" width="141" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-9A-gHZ">
+                                <rect key="frame" x="90" y="381" width="141" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where are you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwN-8B-uIo">
-                                <rect key="frame" x="102" y="281" width="120" height="21"/>
+                                <rect key="frame" x="100" y="289" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Thai Basil" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-aj-wcy">
-                                <rect key="frame" x="93" y="303" width="141" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-aj-wcy">
+                                <rect key="frame" x="91" y="311" width="141" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your rating?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU1-1B-cbK">
-                                <rect key="frame" x="88" y="436" width="150" height="21"/>
+                                <rect key="frame" x="86" y="444" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -296,6 +321,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="onSubmit:" destination="zjn-rN-a1f" eventType="touchUpInside" id="JAW-nJ-aUY"/>
                                     <segue destination="RCP-Ra-OBB" kind="modal" id="n1a-Yl-gQh"/>
                                 </connections>
                             </button>
@@ -304,45 +330,60 @@
                                 <state key="normal" title="☆">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onOnestar:" destination="zjn-rN-a1f" eventType="touchUpInside" id="REO-3q-tKB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8p-PY-4jh">
                                 <rect key="frame" x="221" y="465" width="30" height="30"/>
                                 <state key="normal" title="☆">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onFivestars:" destination="zjn-rN-a1f" eventType="touchUpInside" id="rHC-eU-LqX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMT-X1-7AZ">
                                 <rect key="frame" x="183" y="465" width="30" height="30"/>
                                 <state key="normal" title="☆">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onFourstars:" destination="zjn-rN-a1f" eventType="touchUpInside" id="xTQ-nO-fBY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUU-ks-bje">
-                                <rect key="frame" x="107" y="465" width="30" height="30"/>
-                                <state key="normal" title="☆">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-dz-Qq2">
                                 <rect key="frame" x="145" y="465" width="30" height="30"/>
                                 <state key="normal" title="☆">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onThreestars:" destination="zjn-rN-a1f" eventType="touchUpInside" id="PI5-84-yXt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxz-Rg-Rcr">
+                                <rect key="frame" x="107" y="465" width="30" height="30"/>
+                                <state key="normal" title="☆">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTwostars:" destination="zjn-rN-a1f" eventType="touchUpInside" id="HjT-eK-CIL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="foodName" destination="o6a-9A-gHZ" id="wuf-qB-3Y7"/>
-                        <outlet property="image" destination="X5g-c3-s9W" id="SAt-0f-bNv"/>
-                        <outlet property="rating" destination="Jzs-AC-RXs" id="Oep-uL-xq4"/>
-                        <outlet property="ratingTitle" destination="Gp6-wd-pPo" id="HFm-ox-Qms"/>
-                        <outlet property="submit" destination="tTk-OU-OeZ" id="Hu8-2k-5TW"/>
+                        <outlet property="foodName" destination="o6a-9A-gHZ" id="RNF-ao-eC0"/>
+                        <outlet property="image" destination="X5g-c3-s9W" id="C9N-1a-GKu"/>
+                        <outlet property="ratingTitle" destination="Gp6-wd-pPo" id="1A9-DQ-yzL"/>
+                        <outlet property="restaurantName" destination="HDW-aj-wcy" id="sD7-TT-ZP0"/>
+                        <outlet property="submit" destination="tTk-OU-OeZ" id="1Ez-3u-qao"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8jC-TS-r2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zd3-WL-v1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="791"/>
+            <point key="canvasLocation" x="551" y="787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="duc-tz-YKm">
@@ -368,7 +409,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="n1a-Yl-gQh"/>
-    </inferredMetricsTieBreakers>
 </document>

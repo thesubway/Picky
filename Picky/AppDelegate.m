@@ -20,6 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"JkLfAEVG2reT1EFZdmRc7q7Yl1gmQQTVBbGbxDxb"
                   clientKey:@"3tFH13Bj312ajFFsv9FijpP1BQY5tsinQ3v6cWlp"];
+//    UINavigationController *nav = UINavigationController(rootViewController: self.window!.rootViewController)
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.window.rootViewController];
+//    self.window.rootViewController = nav;
     return YES;
 }
 

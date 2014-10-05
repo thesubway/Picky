@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoDatabase.h"
 
 @interface Rating : UIViewController
+
+@property UIImage *displayImage;
 
 @end

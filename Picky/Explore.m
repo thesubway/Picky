@@ -9,6 +9,7 @@
 #import "Explore.h"
 #import "Profile.h"
 #import "PhotoDatabase.h"
+#import "Rating.h"
 
 @interface Explore ()
 
@@ -100,7 +101,7 @@
 /*
 * gets a random picture of a random food
 */
-- (UIImage *) getNewPicture: (int) direction
+- (UIImage *) updateImage: (int) direction
 {
     UIImage * image;
     if (direction == 1)
@@ -138,12 +139,14 @@
         if (_imageIndex < [_imageCache count])
         {
             _imageIndex++;
+            NSLog(@"%d", _imageIndex);
             return [_imageCache objectAtIndex: _imageIndex - 1];
         }
         else
         {
             _imageIndex++;
             [_imageCache addObject: newImage];
+            NSLog(@"%d", _imageIndex);
             return newImage;
         }
     }
@@ -153,6 +156,7 @@
         if (_imageIndex > 0)
         {
             _imageIndex--;
+            NSLog(@"%d", _imageIndex);
             return [_imageCache objectAtIndex: _imageIndex];
         }
     }
@@ -166,11 +170,11 @@
 {
     if ([sender direction] == UISwipeGestureRecognizerDirectionLeft)
     {
-        [_currentImage setImage: [self getNewPicture: 1]];
+        [_currentImage setImage: [self updateImage: 1]];
     }
     else if ([sender direction] == UISwipeGestureRecognizerDirectionRight)
     {
-        [_currentImage setImage: [self getNewPicture: -1]];
+        [_currentImage setImage: [self updateImage: -1]];
     }
     [self updateRestaurant: @"Location: Thai Basil"];
 }
@@ -179,7 +183,6 @@
     Profile *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
     //    [self.navigationController pushViewController:profile animated:YES];
 }
-
 
 /*
 #pragma mark - Navigation
