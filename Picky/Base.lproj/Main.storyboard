@@ -22,15 +22,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21g-he-98X">
-                                <rect key="frame" x="118" y="518" width="84" height="30"/>
-                                <state key="normal" title="Take Picture">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePicPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hcC-YA-ITD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6q-sp-l2B">
                                 <rect key="frame" x="139" y="189" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,7 +31,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="P6c-pF-Yyo"/>
+                    <navigationItem key="navigationItem" id="P6c-pF-Yyo">
+                        <barButtonItem key="rightBarButtonItem" title="Take Picture" id="mZm-nz-Rcr">
+                            <connections>
+                                <action selector="takePicPressed:" destination="vXZ-lx-hvc" id="W2Y-pN-CFX"/>
+                                <segue destination="RCP-Ra-OBB" kind="push" id="GxS-VH-TFg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,24 +62,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24J-Ge-Dfz">
-                                <rect key="frame" x="260" y="57" width="44" height="30"/>
-                                <state key="normal" title="Profile">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LEV-FX-bHu" kind="modal" id="ig5-Id-USw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDj-s6-Hk0">
-                                <rect key="frame" x="16" y="57" width="54" height="30"/>
-                                <state key="normal" title="Camera">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RgU-uJ-BPn" kind="modal" id="hGM-D2-Qrm"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-Jg-opT">
                                 <rect key="frame" x="25" y="95" width="271" height="276"/>
                             </imageView>
@@ -106,6 +86,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3bf-kE-Fzv">
+                        <barButtonItem key="rightBarButtonItem" title="Profile" id="g7V-Xo-vZ0">
+                            <connections>
+                                <action selector="profilePressed:" destination="RCP-Ra-OBB" id="Pb2-zs-LKv"/>
+                                <segue destination="LEV-FX-bHu" kind="push" id="aoD-7x-Br6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="currentImage" destination="Oap-Jg-opT" id="oSd-hK-RMr"/>
                         <outlet property="exploreTitle" destination="1R2-W9-k7o" id="g7h-qb-IhS"/>
@@ -119,7 +107,7 @@
         <!--Profile-->
         <scene sceneID="E09-Go-sZm">
             <objects>
-                <viewController id="LEV-FX-bHu" customClass="Profile" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" id="LEV-FX-bHu" customClass="Profile" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BPZ-IZ-kDo"/>
                         <viewControllerLayoutGuide type="bottom" id="jhB-bi-PzP"/>
@@ -129,31 +117,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m57-26-ZoH">
-                                <rect key="frame" x="126" y="38" width="79" height="30"/>
+                                <rect key="frame" x="126" y="54" width="79" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEs-FE-Bzu">
-                                <rect key="frame" x="141" y="81" width="48" height="26"/>
+                                <rect key="frame" x="141" y="97" width="48" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Picks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ3-rE-Qyi">
-                                <rect key="frame" x="16" y="317" width="81" height="21"/>
+                                <rect key="frame" x="16" y="333" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Meals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw5-7k-Be2">
-                                <rect key="frame" x="16" y="110" width="105" height="21"/>
+                                <rect key="frame" x="16" y="126" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wKz-eC-3Gr">
-                                <rect key="frame" x="16" y="139" width="288" height="170"/>
+                                <rect key="frame" x="16" y="155" width="288" height="170"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9jj-Oe-25z">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -182,7 +170,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZB3-fX-m78">
-                                <rect key="frame" x="16" y="346" width="288" height="170"/>
+                                <rect key="frame" x="16" y="362" width="288" height="170"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2jK-tc-9Ij">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -210,27 +198,17 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ut-YB-1LR">
-                                <rect key="frame" x="16" y="38" width="52" height="30"/>
-                                <state key="normal" title="Explore">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RCP-Ra-OBB" kind="modal" id="dIs-yJ-2Gr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-jR-SA5">
-                                <rect key="frame" x="263" y="38" width="41" height="30"/>
-                                <state key="normal" title="Meals">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dp3-99-wQX" kind="modal" id="6LX-EO-iVm"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XA3-gk-4wF">
+                        <barButtonItem key="rightBarButtonItem" title="Meals" id="KQ2-Th-ySt">
+                            <connections>
+                                <action selector="mealsPressed:" destination="LEV-FX-bHu" id="vUI-gK-5zd"/>
+                                <segue destination="dp3-99-wQX" kind="push" id="Ish-li-Bdu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="label2" destination="aQ3-rE-Qyi" id="6vy-5r-UWt"/>
                         <outlet property="profileTitle" destination="m57-26-ZoH" id="jAR-Hs-GZf"/>
@@ -245,7 +223,7 @@
         <!--Meals-->
         <scene sceneID="J8x-XU-ePg">
             <objects>
-                <viewController id="dp3-99-wQX" customClass="Meals" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="meals" id="dp3-99-wQX" customClass="Meals" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RpZ-86-TQb"/>
                         <viewControllerLayoutGuide type="bottom" id="d2a-rP-6nc"/>
@@ -264,18 +242,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQq-NJ-8CA">
-                                <rect key="frame" x="16" y="20" width="44" height="30"/>
-                                <state key="normal" title="Profile">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LEV-FX-bHu" kind="modal" id="DLc-7j-yie"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Pka-NI-1hy"/>
                     <connections>
                         <outlet property="mealsTable" destination="fit-Fe-jmq" id="kTJ-Vl-d7r"/>
                         <outlet property="mealsTitle" destination="sdJ-Vn-XnG" id="tme-MR-ZME"/>
@@ -413,7 +383,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dIs-yJ-2Gr"/>
-        <segue reference="ig5-Id-USw"/>
+        <segue reference="n1a-Yl-gQh"/>
     </inferredMetricsTieBreakers>
 </document>

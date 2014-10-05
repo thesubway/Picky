@@ -9,6 +9,7 @@
 #import "Profile.h"
 #import "RecentMealsCell.h"
 #import "YourPicksCell.h"
+#import "Meals.h"
 
 @interface Profile ()
 @property (weak, nonatomic) IBOutlet UILabel *profileTitle;
@@ -39,6 +40,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)mealsPressed:(UIBarButtonItem *)sender {
+    Meals *meals = [self.storyboard instantiateViewControllerWithIdentifier:@"meals"];
+    //    [self.navigationController pushViewController:meals animated:YES];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
