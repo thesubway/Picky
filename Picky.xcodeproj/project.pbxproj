@@ -150,6 +150,7 @@
 		3DF7BC5519DFFDBE002CEF35 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7BC6B19E0F0AB002CEF35 /* danielhoang.jpg */,
 				3DF7BC6119E0A5BF002CEF35 /* anderstruong.jpg */,
 				3DF7BC6219E0A5BF002CEF35 /* logancarter.jpg */,
 				3DF7BC6319E0A5BF002CEF35 /* luisvasquez.jpg */,
@@ -371,6 +372,7 @@
 				6C44389A19DF9EDA00BD1CF6 /* LaunchScreen.xib in Resources */,
 				3DF7BC6619E0A5BF002CEF35 /* logancarter.jpg in Resources */,
 				6C44389719DF9EDA00BD1CF6 /* Images.xcassets in Resources */,
+				3DF7BC6C19E0F0AB002CEF35 /* danielhoang.jpg in Resources */,
 				3DF7BC6819E0A5BF002CEF35 /* williamwu.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

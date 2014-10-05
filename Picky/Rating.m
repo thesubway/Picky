@@ -24,6 +24,7 @@
     [super viewDidLoad];
     self.image.image = self.displayImage;
 }
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     UIAlertView *alert = [[UIAlertView alloc] init];
@@ -31,6 +32,14 @@
     alert.message = @"Enjoy your food!";
     [alert addButtonWithTitle:@"OK!"];
     [alert show];
+    // Do any additional setup after loading the view.
+    [_image setImage: [UIImage imageNamed: @"recent.jpg"]];
+}
+
+- (IBAction) onSubmit: (id) sender
+{
+    /* YOUR CODE HERE */
+
 }
 
 - (void)didReceiveMemoryWarning {
