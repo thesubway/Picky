@@ -79,9 +79,9 @@ static bool cameraShown = NO;
         Rating *rating = [self.storyboard instantiateViewControllerWithIdentifier:@"rating"];
         rating.displayImage = takenImage;
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-//            [self.navigationController pushViewController:rating animated:YES];
+            [self.navigationController pushViewController:rating animated:YES];
 //        [self.storyboard instantiateViewControllerWithIdentifier: @"rating"];
-        [self presentViewController: [self.storyboard instantiateViewControllerWithIdentifier: @"rating"] animated: NO completion: nil];
+//        [self presentViewController: [self.storyboard instantiateViewControllerWithIdentifier: @"rating"] animated: NO completion: nil];
         
 //        });
     }];
@@ -90,8 +90,8 @@ static bool cameraShown = NO;
 
 - (IBAction)takePicPressed:(id)sender {
     Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
-//        [self.navigationController pushViewController:explore animated:YES];
-    [self presentViewController: [self.storyboard instantiateViewControllerWithIdentifier: @"explore"] animated: NO completion: nil];
+        [self.navigationController pushViewController:explore animated:YES];
+//    [self presentViewController: [self.storyboard instantiateViewControllerWithIdentifier: @"explore"] animated: NO completion: nil];
 }
 
 
