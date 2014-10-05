@@ -23,6 +23,7 @@
 		6C44389719DF9EDA00BD1CF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C44389619DF9EDA00BD1CF6 /* Images.xcassets */; };
 		6C44389A19DF9EDA00BD1CF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C44389819DF9EDA00BD1CF6 /* LaunchScreen.xib */; };
 		6C4438A619DF9EDA00BD1CF6 /* PickyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4438A519DF9EDA00BD1CF6 /* PickyTests.m */; };
+		6C4E35AA19E0C15F003B506B /* PhotoDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4E35A919E0C15F003B506B /* PhotoDatabase.m */; };
 		6C56F5B919DFF7DE006F907A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C56F5B819DFF7DE006F907A /* AudioToolbox.framework */; };
 		6C56F5BB19DFF7E9006F907A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C56F5BA19DFF7E9006F907A /* CFNetwork.framework */; };
 		6C56F5BD19DFF7F1006F907A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C56F5BC19DFF7F1006F907A /* CoreGraphics.framework */; };
@@ -78,6 +79,8 @@
 		6C44389F19DF9EDA00BD1CF6 /* PickyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4438A419DF9EDA00BD1CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4438A519DF9EDA00BD1CF6 /* PickyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickyTests.m; sourceTree = "<group>"; };
+		6C4E35A819E0C15F003B506B /* PhotoDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDatabase.h; sourceTree = "<group>"; };
+		6C4E35A919E0C15F003B506B /* PhotoDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDatabase.m; sourceTree = "<group>"; };
 		6C56F5B819DFF7DE006F907A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6C56F5BA19DFF7E9006F907A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6C56F5BC19DFF7F1006F907A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -175,6 +178,8 @@
 			children = (
 				6C56F5D219DFFE75006F907A /* User.h */,
 				6C56F5D319DFFE75006F907A /* User.m */,
+				6C4E35A819E0C15F003B506B /* PhotoDatabase.h */,
+				6C4E35A919E0C15F003B506B /* PhotoDatabase.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C56F5D419DFFE75006F907A /* User.m in Sources */,
+				6C4E35AA19E0C15F003B506B /* PhotoDatabase.m in Sources */,
 				3DF7BC5D19E004B9002CEF35 /* Meals.m in Sources */,
 				6C44389219DF9EDA00BD1CF6 /* ViewController.m in Sources */,
 				3DF7BC5A19E0042E002CEF35 /* Profile.m in Sources */,
