@@ -85,6 +85,13 @@
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     [_scrollView setContentOffset:CGPointMake(0, kbSize.height) animated:YES];
 }
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [_restaurantName resignFirstResponder];
+    [_foodName resignFirstResponder];
+    return YES;
+}
+
 //called when the text field is being edited
 - (IBAction)textFieldDidBeginEditing:(UITextField *)sender
 {
