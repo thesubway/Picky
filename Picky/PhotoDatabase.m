@@ -40,7 +40,6 @@
     PFFile* imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
     PFObject* photo = [PFObject objectWithClassName:@"photo"];
     [photo setObject:imageFile forKey:@"imageFile"];
-//    photo.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     [photo setObject:[NSNumber numberWithInt:photoid] forKey:@"id"];
     [photo setObject:[NSNumber numberWithInteger:userid] forKey:@"user"];
     [photo setObject:[NSNumber numberWithDouble:x] forKey:@"locx"];
@@ -49,26 +48,6 @@
     [photo setObject:restaurant forKey:@"restaurant"];
     [photo setObject:title forKey:@"title"];
     [photo saveInBackground];
-//
-//    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (!error) {
-//            PFObject* photo = [PFObject objectWithClassName:@"photo"];
-//            [photo setObject:imageFile forKey:@"imageFile"];
-//            photo.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-//            [photo setObject:[NSNumber numberWithInt:photoid] forKey:@"id"];
-//            [photo setObject:[NSNumber numberWithInteger:userid] forKey:@"user"];
-//            [photo setObject:[NSNumber numberWithDouble:x] forKey:@"locx"];
-//            [photo setObject:[NSNumber numberWithDouble:y] forKey:@"locy"];
-//            [photo setObject:[NSNumber numberWithDouble:rating] forKey:@"rating"];
-//            [photo setObject:restaurant forKey:@"restaurant"];
-//            [photo setObject:title forKey:@"title"];
-//            [photo saveInBackground];
-//        } else {
-//            NSLog(@"we are definitely here.");
-//            NSLog(@"Error: %@ %@", error, [error userInfo]);
-//        }
-    
-//    }];
 }
 
 /** WHEN RETRIEVEING ALWAYS CALL THIS FUNCTION FIRST! */

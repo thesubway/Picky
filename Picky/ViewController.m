@@ -21,37 +21,42 @@
 static bool cameraShown = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.currentUser = [[User alloc] init];
-    _loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"email"]];
-    _loginView.delegate = self;
-    _loginView.frame = CGRectOffset(_loginView.frame, (self.view.center.x - (_loginView.frame.size.width / 2)), self.view.center.y);
-    [self.view addSubview:_loginView];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 
     [super viewDidAppear:animated];
-//    if UIImagePickerController
-    if (cameraShown == NO) {
-        if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-            cameraShown = YES;
-            UIImagePickerController *imag = [self imagePicker];
-            imag.delegate = self;
-            imag.sourceType = UIImagePickerControllerSourceTypeCamera;
-            imag.allowsEditing = false;
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                [self presentViewController:imag animated:true completion:nil];
-            });
+    
+    if (FBSession.activeSession.isOpen) {
+        //    if UIImagePickerController
+        if (cameraShown == NO) {
+            if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+                cameraShown = YES;
+                UIImagePickerController *imag = [self imagePicker];
+                imag.delegate = self;
+                imag.sourceType = UIImagePickerControllerSourceTypeCamera;
+                imag.allowsEditing = false;
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                    [self presentViewController:imag animated:true completion:nil];
+                });
+            }
+            else {
+                UIAlertView *alert = [[UIAlertView alloc] init];
+                alert.title = @"No camera detected";
+                alert.message = @"This device does not have a camera available";
+                [alert addButtonWithTitle:@"OK"];
+                [alert show];
+            }
         }
-        else {
-            UIAlertView *alert = [[UIAlertView alloc] init];
-            alert.title = @"No camera detected";
-            alert.message = @"This device does not have a camera available";
-            [alert addButtonWithTitle:@"OK"];
-            [alert show];
-        }
+    } else {
+        self.currentUser = [[User alloc] init];
+        _loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"email"]];
+        _loginView.delegate = self;
+        _loginView.frame = CGRectOffset(_loginView.frame, (self.view.center.x - (_loginView.frame.size.width / 2)), self.view.center.y);
+        [self.view addSubview:_loginView];
     }
+    
+
 }
 
 -(void) setCameraShown{

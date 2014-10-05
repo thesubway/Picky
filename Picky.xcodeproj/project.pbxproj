@@ -44,7 +44,6 @@
 		6CFC1CFA19E15DDB00D592BF /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC1CF919E15DDB00D592BF /* FacebookLogin.m */; };
 		6D2CE1EA19E0AC0100FFB0C6 /* RecentMealsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CE1E919E0AC0100FFB0C6 /* RecentMealsCell.m */; };
 		6D2CE1ED19E0AC3A00FFB0C6 /* YourPicksCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CE1EC19E0AC3A00FFB0C6 /* YourPicksCell.m */; };
-		A0A5081119E0B2BC00F64C6E /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A5081019E0B2BC00F64C6E /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,8 +111,6 @@
 		6D2CE1E919E0AC0100FFB0C6 /* RecentMealsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentMealsCell.m; sourceTree = "<group>"; };
 		6D2CE1EB19E0AC3A00FFB0C6 /* YourPicksCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourPicksCell.h; sourceTree = "<group>"; };
 		6D2CE1EC19E0AC3A00FFB0C6 /* YourPicksCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourPicksCell.m; sourceTree = "<group>"; };
-		A0A5080F19E0B2BC00F64C6E /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		A0A5081019E0B2BC00F64C6E /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +195,6 @@
 				6C4E35A919E0C15F003B506B /* PhotoDatabase.m */,
 				5994D90519E0E3A400A2CAC9 /* MealDatabase.h */,
 				5994D90619E0E3A400A2CAC9 /* MealDatabase.m */,
-				A0A5080F19E0B2BC00F64C6E /* Photo.h */,
-				A0A5081019E0B2BC00F64C6E /* Photo.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -414,7 +409,6 @@
 				5994D90719E0E3A400A2CAC9 /* MealDatabase.m in Sources */,
 				3DF7BC2E19DFEA3F002CEF35 /* Explore.m in Sources */,
 				3DF7BC6F19E1632B002CEF35 /* Pages.m in Sources */,
-				A0A5081119E0B2BC00F64C6E /* Photo.m in Sources */,
 				6D2CE1EA19E0AC0100FFB0C6 /* RecentMealsCell.m in Sources */,
 				6D2CE1ED19E0AC3A00FFB0C6 /* YourPicksCell.m in Sources */,
 				6CFC1CFA19E15DDB00D592BF /* FacebookLogin.m in Sources */,
