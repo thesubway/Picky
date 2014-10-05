@@ -37,7 +37,7 @@
                     title:(NSString*) title
                     image:(NSData*) imageData
                      user:(NSInteger) userid {
-    PFFile* imageFile = [PFFile fileWithName:@"image.jpg" contentsAtPath:imageData];
+    PFFile* imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             [photo setObject:imageFile forKey:@"imageFile"];
