@@ -31,6 +31,7 @@
     [self initCache];
     
     UIImage * image = [UIImage imageNamed: @"tomoueda.jpg"];
+    _imageIndex = -1;
     [_currentImage setImage: image];
 }
 
@@ -108,10 +109,9 @@
     {
         NSLog(@"swipe left");
         
-        
+        UIImage * newImage;
         // TEST CODE //
         int random = arc4random_uniform(5);
-        UIImage * newImage;
         if (random == 0)
         {
             newImage = [UIImage imageNamed: @"tomoueda.jpg"];
@@ -181,7 +181,7 @@
 
 - (IBAction)profilePressed:(UIBarButtonItem *)sender {
     Profile *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"profile"];
-    //    [self.navigationController pushViewController:profile animated:YES];
+//        [self.navigationController pushViewController:profile animated:YES];
 }
 
 /*

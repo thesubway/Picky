@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PhotoDatabase.h"
 
-@interface Rating : UIViewController
+@interface Rating : UIViewController <UITextFieldDelegate>
 
 @property UIImage *displayImage;
 
