@@ -14,8 +14,14 @@
     self = [super init];
     if (self)
     {
-        PFQuery *query = [PFQuery queryWithClassName:@"Meal"];
+        query = [PFQuery queryWithClassName:@"meal"];
+        meal = [PFObject objectWithClassName:@"meal"];
     }
+    return self;
+}
+- (float) getAvgRating {
+    float rating = [[meal objectForKey:@"avgRating"] floatValue];
+    return rating;
 }
 
 @end
