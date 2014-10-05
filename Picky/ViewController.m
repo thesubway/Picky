@@ -80,7 +80,7 @@ static bool cameraShown = NO;
         rating.displayImage = takenImage;
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 //            [self.navigationController pushViewController:rating animated:YES];
-        [[self parentViewController] performSegueWithIdentifier: @"rating" sender: self];
+        [self.storyboard instantiateViewControllerWithIdentifier: @"rating"];
         
 //        });
     }];
