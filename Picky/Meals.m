@@ -32,20 +32,25 @@
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath
 {
     UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: @"cell"];
+    
+    
     UILabel * foodName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, tableView.bounds.size.width / 2, [tableView rowHeight] / 2)];
     [foodName setText: @"My Anaconda"];
     [foodName setFont: [UIFont fontWithName: @"Verdana" size: 10]];
     [[cell contentView] addSubview: foodName];
+    
+    
     UILabel * subtitle = [[UILabel alloc] initWithFrame: CGRectMake(0, [tableView rowHeight] / 2, tableView.bounds.size.width / 2, [tableView rowHeight] / 2)];
     [subtitle setText: @"Nicki Minaj feat. Tomo"];
     [subtitle setFont: [UIFont fontWithName: @"Verdana" size: 10]];
     [[cell contentView] addSubview: subtitle];
+    
+    
     UIImageView * image = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"luisvasquez.jpg"]];
     [image setFrame: CGRectMake(tableView.bounds.size.width / 2, 0, tableView.bounds.size.width / 2, [tableView rowHeight])];
     [[cell contentView] addSubview: image];
-//    UIImageView * preview = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"williamwu.jpg"]];
-//    [preview setFrame: CGRectMake(0, 0, tableView.bounds.size.width, 100)];
-//    [[cell contentView] addSubview: preview];
+    
+    
     return cell;
 }
 
@@ -56,7 +61,7 @@
 
 - (NSInteger) numberOfSectionsInTableView: (UITableView *) tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section
