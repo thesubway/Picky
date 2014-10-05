@@ -35,6 +35,7 @@
 - (NSString*) getRetrievedTitle;
 - (PFFile*) getRetrievedImageJPG;
 - (NSInteger) getRetrievedUserId;
+- (bool) getRetrieved;
 
 
 @end
