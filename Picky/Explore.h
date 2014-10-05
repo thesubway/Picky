@@ -10,4 +10,6 @@
 
 @interface Explore : UIViewController
 
+@property NSString *ratingStars;
+
 @end

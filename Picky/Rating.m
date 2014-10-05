@@ -106,6 +106,22 @@
                           image: UIImageJPEGRepresentation(self.displayImage, 1.0)
                            user: userId];
     Explore *explore = [self.storyboard instantiateViewControllerWithIdentifier:@"explore"];
+
+    if (self.rating == 1.0) {
+        explore.ratingStars = @"Rating: ★ ";
+    }
+    else if (self.rating == 2.0) {
+        explore.ratingStars = @"Rating: ★ ★ ";
+    }
+    else if (self.rating == 3.0) {
+        explore.ratingStars = @"Rating: ★ ★ ★ ";
+    }
+    else if (self.rating == 4.0) {
+        explore.ratingStars = @"Rating: ★ ★ ★ ★ ";
+    }
+    else if (self.rating == 5.0) {
+        explore.ratingStars = @"Rating: ★ ★ ★ ★ ★ ";
+    }
     [self.navigationController pushViewController:explore animated:YES];
 }
 

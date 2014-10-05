@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *currentImage;
 @property (weak, nonatomic) IBOutlet UILabel *exploreTitle;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantName;
+@property (strong, nonatomic) IBOutlet UILabel *ratingLabel;
 @property NSMutableArray * imageCache;
 @property int imageIndex;
 
@@ -33,6 +34,9 @@
     UIImage * image = [UIImage imageNamed: @"tomoueda.jpg"];
     _imageIndex = -1;
     [_currentImage setImage: image];
+    if (self.ratingStars != nil) {
+        self.ratingLabel.text = self.ratingStars;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,6 +116,7 @@
         UIImage * newImage;
         // TEST CODE //
         int random = arc4random_uniform(5);
+        NSLog(@"rand num: %d",random);
         if (random == 0)
         {
             newImage = [UIImage imageNamed: @"tomoueda.jpg"];
