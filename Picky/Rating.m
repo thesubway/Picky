@@ -71,7 +71,7 @@
 //user:(NSInteger) userid
 
     int photoId = 0; // fix this
-    int userId = 0; // just your facebook id
+    NSInteger userId = 0; // just your facebook id
     double x = 0.0;
     double y = 0.0;
     [database uploadPhotoDataid: photoId
